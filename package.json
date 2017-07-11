@@ -16,9 +16,12 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "4.0.0-alpha.6",
+    "css-font-weight": "^1.0.7",
+    "css-line-height": "^1.0.7",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
+    "smoothscroll-polyfill": "^0.3.5",
     "typeface-montserrat": "^0.0.31",
     "vue": "^2.3.3",
     "vue-countup-v2": "^0.1.2",

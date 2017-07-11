@@ -1,16 +1,17 @@
 <template lang="pug">
   section.internship
     .container-fluid.bg-midnight-blue.text-center.py-5
-        h1.h2.text-white Momenteel ben ik op zoek naar een stageplaats.
-        p.mt-3.mb-5.silver Van {{ from }} tot en met {{ to }}.
-        a.btn.btn-outline-secondary.text-center.m-auto(:href="mailto")
+        h1.h2.text-white.fw5 Momenteel ben ik op zoek naar een stageplaats.
+        p.mt-3.mb-5.silver.fw2 Van {{ from }} tot en met {{ to }}.
+        portfolio-button(:href="mailto")
           i.fa.fa-check.mr-2
-          span Mail mij
+          span.fw1 Mail mij
 </template>
 
 <script>
   import moment from 'moment'
   import resume from '@/resume'
+  import Button from '@/components/Helpers/Button'
 
   export default {
     name: 'portfolio-internship',
@@ -19,6 +20,9 @@
         required: true,
         type: Object
       }
+    },
+    components: {
+      PortfolioButton: Button
     },
     computed: {
       from () {
@@ -36,33 +40,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped="scoped">
-
-  @import "../../../node_modules/flat-ui-colors-sass/flat-colors";
-
-  .internship {
-
-    h1 {
-      font-weight: 500;
-    }
-
-    p {
-      font-weight: 200;
-    }
-
-    a {
-      font-weight: 100;
-      text-transform: uppercase;
-      background-color: transparent;
-      border-color: $flat-silver;
-      color: $flat-silver;
-      border-radius: 2px;
-
-      &:hover {
-        border-color: white;
-        color: white;
-      }
-    }
-  }
-</style>

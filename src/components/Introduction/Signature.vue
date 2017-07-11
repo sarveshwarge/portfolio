@@ -1,7 +1,7 @@
 <template lang="pug">
   span
-    p.m-0 Met vriendelijke groet,
-    p.m-0.signature(v-html="signature")
+    p.m-0.silver.fw2.lh-2 Met vriendelijke groet,
+    p.m-0.signature.midnight-blue(v-html="signature")
 </template>
 
 <script>
@@ -29,6 +29,6 @@
 
   .signature {
     font-family: 'Taken by Vultures', fantasy;
-    font-size: 4rem;
+    font-size: 5rem;
   }
 </style>

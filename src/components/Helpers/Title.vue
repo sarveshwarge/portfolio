@@ -1,8 +1,8 @@
 <template lang="pug">
   .row.my-5
     .col.text-center
-      h1.h3.midnight-blue(v-html="title")
-      h2.h6.silver(v-html="subtitle")
+      h1.h3.midnight-blue.font-weight-bold.text-uppercase(v-html="title")
+      h2.fw1.h6.silver(v-html="subtitle")
       border
 </template>
 
@@ -28,11 +28,6 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
   h2 {
     line-height: 2rem;
   }

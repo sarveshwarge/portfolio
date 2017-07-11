@@ -10,6 +10,10 @@
 </script>
 
 <style lang="scss">
+  // Helpers
+  @import "../node_modules/css-font-weight/css/font-weight.min.css";
+  @import "../node_modules/css-line-height/css/line-height.min.css";
+
   // NPM
   @import "../node_modules/typeface-montserrat/index.css";
   @import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -25,13 +25,4 @@
     -o-background-size: cover;
     background-size: cover;
   }
-
-  h1 {
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-weight: 100;
-  }
 </style>
