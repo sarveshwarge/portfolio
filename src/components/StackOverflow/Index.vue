@@ -37,6 +37,9 @@
         .then((response) => {
           this.badges = response.data.items
         })
+        .catch(() => {
+          this.badges = null
+        })
     }
   }
 </script>
