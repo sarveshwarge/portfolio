@@ -1,7 +1,7 @@
 <template lang="pug">
   a.badge.badge-default.mr-2.px-2(:href="link", target="_blank")
     i.fa.fa-circle.mr-2(:class="rank")
-    span.fw4.text-white(v-html="name")
+    span.fw4.text-white(v-html="label")
 </template>
 
 <script>
@@ -21,6 +21,12 @@
       },
       link () {
         return this.badge.link
+      },
+      count () {
+        return this.badge.award_count
+      },
+      label () {
+        return this.count > 1 ? `${this.name} &times; ${this.count}` : this.name
       }
     }
   }
