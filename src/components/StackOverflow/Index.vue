@@ -9,12 +9,15 @@
             stack-overflow-badge(v-for="(badge, index) in badges",
                                  :badge="badge",
                                  :key="index")
+        stack-overflow-text
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis turpis quis nulla lobortis tincidunt. Phasellus aliquam odio elit, nec pretium velit dapibus sit amet. Curabitur nec vestibulum lectus. Donec laoreet porta nisl in lobortis. Ut nec metus velit. Sed nec elementum tortor. Quisque ac leo rutrum, congue lectus vitae, rutrum nibh. Donec faucibus elit eu iaculis blandit.
 </template>
 
 <script>
   import axios from 'axios'
 
   import Title from '@/components/Helpers/Title.vue'
+  import Text from '@/components/Helpers/Text.vue'
   import Badge from '@/components/StackOverflow/Badge.vue'
 
   export default {
@@ -26,6 +29,7 @@
     },
     components: {
       stackOverflowTitle: Title,
+      stackOverflowText: Text,
       stackOverflowBadge: Badge
     },
     created () {
