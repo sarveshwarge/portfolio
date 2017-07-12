@@ -1,0 +1,264 @@
+{
+  "basics": {
+    "name": "Maarten Paauw",
+    "label": "Allround DTP-er & Full Stack Developer",
+    "picture": "http://www.gravatar.com/avatar/c32c1a3574c36662aee8a65da32ca8ee",
+    "email": "maartenpaauw@gmail.com",
+    "phone": "+31 (0)6 578 37 765",
+    "website": "http://maartenpaauw.com/",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros mauris, lobortis at sem quis, porttitor accumsan dui. Vestibulum egestas fringilla justo in rhoncus. Maecenas volutpat lectus purus, vel viverra erat posuere id. Mauris ut orci nec nibh elementum faucibus. Donec iaculis dignissim felis non scelerisque. Ut tristique nisl eu metus tempus, at ullamcorper lacus tincidunt. Quisque sodales mattis ligula eget mollis.",
+    "location": {
+      "address": "Brouwerstraat 37",
+      "postalCode": "2231 HN",
+      "city": "Rijnsburg",
+      "countryCode": "NL",
+      "region": "Zuid Holland"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "maartenpaauw",
+        "url": "https://github.com/maartenpaauw"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "paauw",
+        "url": ""
+      },
+      {
+        "network": "Bitbucket",
+        "username": "m44rt3np44uw",
+        "url": ""
+      },
+      {
+        "network": "Stack Overflow",
+        "username": "maartenpaauw",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Appsketch",
+      "position": "Eigenaar",
+      "website": "http://www.appsketch.nl/",
+      "startDate": "2012-01-01",
+      "summary": "Verkoop van schetsblokken voor iOS ontwikkelaars / ontwerpers. Ook kunt u bij Appsketch terecht voor grafisch ontwerp, denk daarbij aan het van ontwerpen huisstijlen, promotie materiaal, flyers, posters, logo's enzovoort. Ook kunt u terecht voor webdevelopment. Wij kijken graag samen met u wat de mogelijkheden zijn om de presentatie van uw bedrijf op alle terreinen te verbeteren. Lopende opdrachten: Station Drukwer Hoogenboom & Ravelli MSU Service  Opdrachten o.a. uitgevoerd voor: PEAMP Financial - Control & Interim Management Challenge 11 - Management, Finance & Control Rob van den Oever - Timmer-, klus- en onderhoudsbedrijf Paauw & van Duijvenbode B.V. LaQ - Nederland Zafer - Verbouwings-, Onderhouds- en Schildersbedrijf Vishandel Atlantic Cepa Webdiensten Paardenmarkt Rijnsburg.",
+      "highlights": []
+    },
+    {
+      "company": "Gracious Studios",
+      "position": "Web developer",
+      "website": "https://www.graciousstudios.nl/",
+      "startDate": "2015-01-01",
+      "summary": "Stagiair web developer bij Gracious Studios in Den Haag.",
+      "highlights": [],
+      "endDate": "2015-05-01"
+    },
+    {
+      "company": "Katwijkse Zeeverkenners",
+      "position": "Hoofdbegeleider Wildevaert",
+      "website": "https://www.katwijksezeeverkenners.nl/",
+      "startDate": "2012-09-01",
+      "summary": "Hoofdbegeleider op de Wildevaert groep binnen de Katwijkse Zeeverkenners.",
+      "highlights": [],
+      "endDate": "2014-02-01"
+    },
+    {
+      "company": "Station Drukwerk",
+      "position": "Allround DTP-er",
+      "website": "https://www.stationdrukwerk.nl/",
+      "startDate": "2012-06-01",
+      "summary": "Alle voorkomende werkzaamheden op het gebied van DTP.",
+      "highlights": [],
+      "endDate": "2014-03-01"
+    },
+    {
+      "company": "Olympia Uitzendbureau",
+      "position": "Oproepkracht",
+      "website": "https://www.olympia.nl/",
+      "startDate": "2012-05-01",
+      "summary": "Oproepkracht bij Olympia Uitzendbureau.",
+      "highlights": [],
+      "endDate": "2012-07-01"
+    },
+    {
+      "company": "Maarten Paauw - maartenpaauw.com",
+      "position": "Allround DTP-er",
+      "website": "",
+      "startDate": "2012-01-01",
+      "summary": "Ik verricht alle voorkomende DTP opdrachten zoals: Ontwerpen huisstijlen, promotie materiaal, flyers, posters, logo's enzovoort. Opdrachten o.a. uitgevoerd voor: PEAMP Financial - Control & Interim Management. Challenge 11 - Management, Finance & Control. Rob van den Oever - Timmer-, klus- en onderhoudsbedrijf. Paauw & van Duijvenbode B.V. LaQ - Nederland. Zafer - Verbouwings-, Onderhouds- en Schildersbedrijf.",
+      "highlights": [],
+      "endDate": "2013-01-01"
+    },
+    {
+      "company": "Katwijkse Zeeverkenners",
+      "position": "Voorzitter Wildevaert",
+      "website": "https://www.katwijksezeeverkenners.nl/",
+      "startDate": "2011-09-01",
+      "summary": "Voorzitter op de Wildevaert groep binnen de Katwijkse Zeeverkenners.",
+      "highlights": [],
+      "endDate": "2012-09-01"
+    },
+    {
+      "company": "Station Drukwerk",
+      "position": "Allround DTP-er",
+      "website": "https://www.stationdrukwerk.nl/",
+      "startDate": "2010-11-01",
+      "summary": "Alle voorkomende werkzaamheden op het gebied van DTP als stagiair.",
+      "highlights": [],
+      "endDate": "2012-04-01"
+    },
+    {
+      "company": "Restaurant De Zwaan",
+      "position": "Medewerker",
+      "website": "http://www.restaurant-dezwaan.nl/",
+      "startDate": "2010-02-01",
+      "summary": "Afwas- en buffetmedewerker.",
+      "highlights": [],
+      "endDate": "2011-01-01"
+    },
+    {
+      "company": "Sandd",
+      "position": "Postbezorger",
+      "website": "https://www.sandd.nl/",
+      "startDate": "2009-02-01",
+      "summary": "Het bezorgen van post, reclame en brieven.",
+      "highlights": [],
+      "endDate": "2009-07-01"
+    },
+    {
+      "company": "Buijze Pers",
+      "position": "Krantenjongen",
+      "website": "http://buijzepers.nl/",
+      "startDate": "2007-09-01",
+      "summary": "Het bezorgen van de Woensdag- en Weekendkrant.",
+      "highlights": [],
+      "endDate": "2009-02-01"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "website": "http://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description...",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Hogeschool Leiden",
+      "area": "Informatica",
+      "studyType": "Bachelor",
+      "startDate": "2015-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2019-01-01"
+    },
+    {
+      "institution": "Grafisch Lyceum Rotterdam",
+      "area": "Media Developer",
+      "studyType": "MBO 4",
+      "startDate": "2012-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2015-01-01"
+    },
+    {
+      "institution": "Grafisch Lyceum Rotterdam",
+      "area": "Allround DTP-er",
+      "studyType": "MBO 3",
+      "startDate": "2009-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2012-01-01"
+    },
+    {
+      "institution": "Da Vinci College - Kagerstraat",
+      "area": "Natuur & Techniek",
+      "studyType": "VMBO TL",
+      "startDate": "2005-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2009-01-01"
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Nederlands",
+      "level": "Moedertaal"
+    },
+    {
+      "name": "Engels",
+      "level": "Uitstekend"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Programmeren",
+      "keywords": []
+    },
+    {
+      "name": "Apple",
+      "keywords": [
+        "iPhone",
+        "Macbook Pro"
+      ]
+    },
+    {
+      "name": "Films & Series",
+      "keywords": []
+    },
+    {
+      "name": "Games",
+      "keywords": [
+        "Counter Strike Global Offencive",
+        "Players Unknown Battleground"
+      ]
+    },
+    {
+      "name": "Muziek",
+      "keywords": []
+    },
+    {
+      "name": "Gitaar Spelen",
+      "keywords": []
+    },
+    {
+      "name": "Koffie",
+      "keywords": []
+    },
+    {
+      "name": "Reizen",
+      "keywords": []
+    }
+  ],
+  "references": [
+    {
+      "name": "Laura Plug",
+      "reference": "Maarten Paauw heeft mij goed geholpen met het opzetten van mijn blog op WordPress.org."
+    },
+    {
+      "name": "Pieter Paauw",
+      "reference": "In 2011 en 2012 heeft Maarten Paauw verschillende DTP-werkzaamheden voor mij uitgevoerd. Zo heeft hij verschillende huisstijlen ontwikkeld en promotiemateriaal gemaakt. Mij is opgevallen dat Maarten hoge kwaliteit werk levert en zijn afspraken altijd nakomt. Maarten is betrouwbaar, zeer vakkundig en prettig in de omgang. Hij stelt de klant centraal en weet globale indeeën van de opdrachtgever te vertalen naar concrete ontwerpen. Voor al het DTP werk kan ik Maarten van harte aanbevelen."
+    }
+  ]
+}

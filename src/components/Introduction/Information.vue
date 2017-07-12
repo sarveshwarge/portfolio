@@ -1,0 +1,25 @@
+<template lang="pug">
+  .row
+    .col-4
+      p.text-uppercase.midnight-blue.lh-2(v-html="label")
+    .col
+      p.silver.fw2.lh-2(v-if="value", v-html="value")
+      span.fw2(v-else="")
+        slot
+</template>
+
+<script>
+  export default {
+    name: 'introduction-information',
+    props: {
+      label: {
+        required: true,
+        type: String
+      },
+      value: {
+        required: false,
+        type: String
+      }
+    }
+  }
+</script>
