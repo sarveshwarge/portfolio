@@ -3,8 +3,8 @@
     portfolio-header
     portfolio-introduction
     portfolio-stack-overflow
-    portfolio-internship(:period="period")
     portfolio-cv
+    portfolio-internship(:period="period")
     portfolio-whatpulse
     portfolio-footer
 </template>

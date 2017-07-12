@@ -3,10 +3,13 @@
     .col-8
       p
         strong.text-uppercase.midnight-blue(v-html="position")
-      p
+      p(v-if="website")
         a.concrete(:href="website", target="_blank")
           i.fa.mr-2(:class="icon")
           span(v-html="company")
+      p.concrete(v-else="")
+        i.fa.mr-2(:class="icon")
+        span(v-html="company")
       p.text-justify.silver.summary.fw1.lh-2(v-html="summary")
       hr.mt-3.mb-5
     .col-4.text-right.small.silver
