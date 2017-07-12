@@ -5,6 +5,7 @@
     portfolio-stack-overflow
     portfolio-cv
     portfolio-internship(:period="period")
+    portfolio-interests
     portfolio-whatpulse
     portfolio-footer
 </template>
@@ -16,6 +17,7 @@
   import Internship from '@/components/Internship/Index.vue'
   import CV from '@/components/CV/Index.vue'
   import Whatpulse from '@/components/Whatpulse/Index.vue'
+  import Interests from '@/components/Interests/Index.vue'
   import Footer from '@/components/Footer/Index.vue'
 
   export default {
@@ -35,6 +37,7 @@
       portfolioInternship: Internship,
       portfolioCv: CV,
       portfolioWhatpulse: Whatpulse,
+      portfolioInterests: Interests,
       portfolioFooter: Footer
     }
   }

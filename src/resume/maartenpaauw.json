@@ -198,6 +198,10 @@
   ],
   "interests": [
     {
+      "name": "Programmeren",
+      "keywords": []
+    },
+    {
       "name": "Apple",
       "keywords": [
         "iPhone",
@@ -205,15 +209,11 @@
       ]
     },
     {
-      "name": "Gitaar Spelen",
-      "keywords": []
-    },
-    {
       "name": "Films & Series",
       "keywords": []
     },
     {
-      "name": "Gamen",
+      "name": "Games",
       "keywords": [
         "Counter Strike Global Offencive",
         "Players Unknown Battleground"
@@ -224,7 +224,15 @@
       "keywords": []
     },
     {
+      "name": "Gitaar Spelen",
+      "keywords": []
+    },
+    {
       "name": "Koffie",
+      "keywords": []
+    },
+    {
+      "name": "Reizen",
       "keywords": []
     }
   ],

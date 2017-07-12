@@ -20,6 +20,7 @@
 
 <script>
   import moment from 'moment'
+
   export default {
     name: 'cv-experience',
     props: {
@@ -53,6 +54,9 @@
       icon () {
         return (typeof this.experience.company !== 'undefined') ? 'fa-briefcase' : 'fa-graduation-cap'
       }
+    },
+    created () {
+      moment.locale('nl')
     }
   }
 </script>

@@ -7,10 +7,10 @@
                      :experiences="education")
       cv-experiences(title="Werkervaring",
                      :experiences="work")
-      .row
-        .col
-          cv-button
-            span.fw2 Download mijn CV
+      //.row
+      //  .col
+      //    cv-button
+      //      span.fw2 Download mijn CV
 </template>
 
 <script>

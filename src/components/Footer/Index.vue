@@ -3,7 +3,7 @@
     .container-fluid
       .row
         .col.text-center
-          footer-scroll-to-top
+          //footer-scroll-to-top
     footer-copyright
 </template>
 

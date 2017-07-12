@@ -1,5 +1,5 @@
 <template lang="pug">
-  a.badge.badge-default.mr-2.px-2(:href="link", target="_blank")
+  a.badge.badge-default.mt-2.mr-2.px-2(:href="link", target="_blank")
     i.fa.fa-circle.mr-2(:class="rank")
     span.fw4.text-white(v-html="label")
 </template>

@@ -1,7 +1,7 @@
 <template lang="pug">
   section.whatpulse
     .container
-      .row.py-5.text-center
+      .row.pt-5.pb-3.text-center
         whatpulse-stat(type="keys")
         whatpulse-stat(type="clicks")
       whatpulse-text
