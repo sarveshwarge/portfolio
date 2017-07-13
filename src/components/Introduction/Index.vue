@@ -1,23 +1,24 @@
 <template lang="pug">
-  section.introduction
-    .container.my-5
-      introduction-title(:title="name",
-                         :subtitle="label")
-      .row.my-5
-        .col
-          introduction-information(label="Functie", :value="label")
-          introduction-information(label="E-mailadres")
-            a.silver.lh-2(:href="`mailto:${email}`", v-html="email")
-          introduction-information(label="Mobiel")
-            a.silver.lh-2(:href="`tel:${mobile}`", v-html="mobile")
-          introduction-information(label="Adres")
-            p.silver.lh-2
-              span.d-block(v-html="location.address")
-              span.d-block(v-html="`${location.postalCode} ${location.city}`")
-              span.d-block(v-html="location.region")
-        .col
-          p.silver.fw2.lh-2(v-html="summary")
-          introduction-signature(:name="name")
+  section#introduction
+    .container-fluid
+      .container.my-5
+        introduction-title(:title="name",
+                           :subtitle="label")
+        .row.my-5
+          .col
+            introduction-information(label="Functie", :value="label")
+            introduction-information(label="E-mailadres")
+              a.silver.lh-2(:href="`mailto:${email}`", v-html="email")
+            introduction-information(label="Mobiel")
+              a.silver.lh-2(:href="`tel:${mobile}`", v-html="mobile")
+            introduction-information(label="Adres")
+              p.silver.lh-2
+                span.d-block(v-html="location.address")
+                span.d-block(v-html="`${location.postalCode} ${location.city}`")
+                span.d-block(v-html="location.region")
+          .col
+            p.silver.fw2.lh-2(v-html="summary")
+            introduction-signature(:name="name")
 </template>
 
 <script>

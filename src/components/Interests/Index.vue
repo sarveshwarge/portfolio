@@ -6,8 +6,9 @@
                         subtitle="Zo vul ik het liefst mijn dag")
         .row
           interest(v-for="(interest, index) in interests",
-                   :interest="interest",
                    :key="index",
+                   :interest="interest",
+                   :icon="icon(index)",
                    :index="index")
 </template>
 
@@ -26,6 +27,20 @@
     computed: {
       interests () {
         return resume.interests
+      }
+    },
+    methods: {
+      icon (index) {
+        return [
+          'fa-code',
+          'fa-apple',
+          'fa-film',
+          'fa-gamepad',
+          'fa-music',
+          'fa-child',
+          'fa-coffee',
+          'fa-plane'
+        ][index]
       }
     }
   }

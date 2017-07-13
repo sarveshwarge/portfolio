@@ -4,8 +4,6 @@
 </template>
 
 <script>
-  import smoothscroll from 'smoothscroll-polyfill'
-
   import Button from '@/components/Helpers/Button'
 
   export default {
@@ -21,9 +19,6 @@
           behavior: 'smooth'
         })
       }
-    },
-    created () {
-      smoothscroll.polyfill()
     }
   }
 </script>

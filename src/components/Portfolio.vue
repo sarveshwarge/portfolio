@@ -4,16 +4,17 @@
     portfolio-introduction
     portfolio-stack-overflow
     portfolio-cv
-    portfolio-internship(:period="iternship")
-    portfolio-interests
     portfolio-whatpulse
+    portfolio-certificates
+    portfolio-internship(:period="iternship")
+    portfolio-skills
+    portfolio-interests
     portfolio-references
+    portfolio-projects
     portfolio-footer
 </template>
 
 <script>
-  import moment from 'moment'
-
   import Header from '@/components/Header/Index'
   import Introduction from '@/components/Introduction/Index'
   import StackOverflow from '@/components/StackOverflow/Index'
@@ -23,14 +24,17 @@
   import Interests from '@/components/Interests/Index'
   import Footer from '@/components/Footer/Index'
   import References from '@/components/References/Index'
+  import Projects from '@/components/Projects/Index'
+  import Skills from '@/components/Skills/Index'
+  import Certificates from '@/components/Certificates/Index'
 
   export default {
     name: 'portfolio-main',
     data () {
       return {
         iternship: {
-          from: moment('2018-02-05'), // TODO: check if this date is correct.
-          to: moment('2018-07-06')    // TODO: check if this date is correct.
+          from: new Date('2018-02-05'), // TODO: check if this date is correct.
+          to: new Date('2018-07-06')    // TODO: check if this date is correct.
         }
       }
     },
@@ -43,6 +47,9 @@
       portfolioWhatpulse: Whatpulse,
       portfolioInterests: Interests,
       portfolioReferences: References,
+      portfolioProjects: Projects,
+      portfolioSkills: Skills,
+      portfolioCertificates: Certificates,
       portfolioFooter: Footer
     }
   }
