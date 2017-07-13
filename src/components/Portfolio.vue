@@ -12,8 +12,6 @@
 </template>
 
 <script>
-  import moment from 'moment'
-
   import Header from '@/components/Header/Index'
   import Introduction from '@/components/Introduction/Index'
   import StackOverflow from '@/components/StackOverflow/Index'
@@ -29,8 +27,8 @@
     data () {
       return {
         iternship: {
-          from: moment('2018-02-05'), // TODO: check if this date is correct.
-          to: moment('2018-07-06')    // TODO: check if this date is correct.
+          from: new Date('2018-02-05'), // TODO: check if this date is correct.
+          to: new Date('2018-07-06')    // TODO: check if this date is correct.
         }
       }
     },

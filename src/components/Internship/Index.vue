@@ -27,10 +27,10 @@
     },
     computed: {
       from () {
-        return this.period.from.format('D MMMM')
+        return moment(this.period.from).format('D MMMM')
       },
       to () {
-        return this.period.to.format('D MMMM')
+        return moment(this.period.to).format('D MMMM')
       },
       mailto () {
         return `mailto:${resume.basics.email}?subject=Stageplaats`
