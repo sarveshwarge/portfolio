@@ -3,7 +3,7 @@
     h1.midnight-blue
       vue-count-up(:end="count",
                    :options="options")
-    small.silver.text-uppercase(v-html="helper")
+    span.small.silver.text-uppercase(v-html="helper")
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template lang="pug">
   .col.text-center
-    i.fa.fa-2x.mb-3.midnight-blue(:class="icon(index)")
+    i.fa.fa-2x.mb-3.midnight-blue(:class="icon")
     p.concrete.text-uppercase.small(v-html="name")
 </template>
 
@@ -15,25 +15,15 @@
       index: {
         required: true,
         type: Number
+      },
+      icon: {
+        required: true,
+        type: String
       }
     },
     computed: {
       name () {
         return this.interest.name
-      }
-    },
-    methods: {
-      icon (index) {
-        return [
-          'fa-code',
-          'fa-apple',
-          'fa-film',
-          'fa-gamepad',
-          'fa-music',
-          'fa-child',
-          'fa-coffee',
-          'fa-plane'
-        ][index]
       }
     }
   }

@@ -1,6 +1,7 @@
 <template lang="pug">
   section.internship
-    .container-fluid.bg-midnight-blue.text-center.py-5
+    .container-fluid.bg-midnight-blue.p-5
+      .container.text-center
         h1.h2.text-white.fw5 Momenteel ben ik op zoek naar een stageplaats.
         p.mt-3.mb-5.silver.fw2 Van {{ from }} tot en met {{ to }}.
         portfolio-button(:href="mailto")

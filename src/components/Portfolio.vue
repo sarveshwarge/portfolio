@@ -4,10 +4,13 @@
     portfolio-introduction
     portfolio-stack-overflow
     portfolio-cv
-    portfolio-internship(:period="iternship")
-    portfolio-interests
     portfolio-whatpulse
+    portfolio-certificates
+    portfolio-internship(:period="iternship")
+    portfolio-skills
+    portfolio-interests
     portfolio-references
+    portfolio-projects
     portfolio-footer
 </template>
 
@@ -21,6 +24,9 @@
   import Interests from '@/components/Interests/Index'
   import Footer from '@/components/Footer/Index'
   import References from '@/components/References/Index'
+  import Projects from '@/components/Projects/Index'
+  import Skills from '@/components/Skills/Index'
+  import Certificates from '@/components/Certificates/Index'
 
   export default {
     name: 'portfolio-main',
@@ -41,6 +47,9 @@
       portfolioWhatpulse: Whatpulse,
       portfolioInterests: Interests,
       portfolioReferences: References,
+      portfolioProjects: Projects,
+      portfolioSkills: Skills,
+      portfolioCertificates: Certificates,
       portfolioFooter: Footer
     }
   }

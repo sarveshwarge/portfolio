@@ -1,18 +1,19 @@
 <template lang="pug">
   header.h-100
+    portfolio-menu
     .container-fluid.bg-clouds.bg-image.h-75
-      .row
-        .col
     portfolio-image
 </template>
 
 <script>
   import Image from '@/components/Header/Image'
+  import Menu from '@/components/Menu/Index'
 
   export default {
     name: 'portfolio-header',
     components: {
-      portfolioImage: Image
+      portfolioImage: Image,
+      portfolioMenu: Menu
     }
   }
 </script>

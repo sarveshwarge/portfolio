@@ -2,7 +2,7 @@
   section.references
     .container-fluid.p-5
       .container
-        references-title(title="Referenties",
+        references-title(title="Certificaten",
                          subtitle="Lorem ipsum dolor sit amet")
 </template>
 
@@ -11,13 +11,13 @@
   import Title from '@/components/Helpers/Title'
 
   export default {
-    name: 'portfolio-references',
+    name: 'portfolio-certificates',
     components: {
       referencesTitle: Title
     },
     computed: {
-      references () {
-        return resume.references
+      certificates () {
+        return resume.projects
       }
     }
   }

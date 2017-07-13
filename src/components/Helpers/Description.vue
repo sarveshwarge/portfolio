@@ -1,12 +1,12 @@
 <template lang="pug">
-  .row.mt-5
-    .col-8.offset-2.text-center
+  .row.mt-5.justify-content-center
+    .col-8.text-center
       span.small.silver.lh-2
         slot
 </template>
 
 <script>
   export default {
-    name: 'portfolio-text'
+    name: 'portfolio-description'
   }
 </script>
