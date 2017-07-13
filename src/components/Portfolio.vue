@@ -4,7 +4,7 @@
     portfolio-introduction
     portfolio-stack-overflow
     portfolio-cv
-    portfolio-internship(:period="period")
+    portfolio-internship(:period="iternship")
     portfolio-interests
     portfolio-whatpulse
     portfolio-references
@@ -12,23 +12,25 @@
 </template>
 
 <script>
-  import Header from '@/components/Header/Index.vue'
-  import Introduction from '@/components/Introduction/Index.vue'
-  import StackOverflow from '@/components/StackOverflow/Index.vue'
-  import Internship from '@/components/Internship/Index.vue'
-  import CV from '@/components/CV/Index.vue'
-  import Whatpulse from '@/components/Whatpulse/Index.vue'
-  import Interests from '@/components/Interests/Index.vue'
-  import Footer from '@/components/Footer/Index.vue'
-  import References from '@/components/References/Index.vue'
+  import moment from 'moment'
+
+  import Header from '@/components/Header/Index'
+  import Introduction from '@/components/Introduction/Index'
+  import StackOverflow from '@/components/StackOverflow/Index'
+  import Internship from '@/components/Internship/Index'
+  import CV from '@/components/CV/Index'
+  import Whatpulse from '@/components/Whatpulse/Index'
+  import Interests from '@/components/Interests/Index'
+  import Footer from '@/components/Footer/Index'
+  import References from '@/components/References/Index'
 
   export default {
     name: 'portfolio-main',
     data () {
       return {
-        period: {
-          from: new Date(),
-          to: new Date()
+        iternship: {
+          from: moment('2018-02-05'), // TODO: check if this date is correct.
+          to: moment('2018-07-06')    // TODO: check if this date is correct.
         }
       }
     },

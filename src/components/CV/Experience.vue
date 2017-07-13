@@ -34,13 +34,13 @@
         return this.experience.position || this.experience.area
       },
       company () {
-        return this.experience.company || this.experience.institution
+        return this.experience.name || this.experience.institution
       },
       summary () {
         return this.experience.summary || this.experience.studyType
       },
       website () {
-        return this.experience.website
+        return this.experience.url
       },
       date () {
         return `${this.start} — ${this.end}`
@@ -49,10 +49,10 @@
         return moment(this.experience.startDate).format('MMMM YYYY')
       },
       end () {
-        return (typeof this.experience.endDate === 'undefined') ? 'Huidig' : moment(this.experience.endDate).format('MMMM YYYY')
+        return (this.experience.endDate === '') ? 'Huidig' : moment(this.experience.endDate).format('MMMM YYYY')
       },
       icon () {
-        return (typeof this.experience.company !== 'undefined') ? 'fa-briefcase' : 'fa-graduation-cap'
+        return (typeof this.experience.name !== 'undefined') ? 'fa-briefcase' : 'fa-graduation-cap'
       }
     },
     created () {

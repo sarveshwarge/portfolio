@@ -10,6 +10,7 @@
 
 <script>
   import moment from 'moment'
+
   import resume from '@/resume'
   import Button from '@/components/Helpers/Button'
 
@@ -26,10 +27,10 @@
     },
     computed: {
       from () {
-        return moment(this.period.from).format('D MMMM')
+        return this.period.from.format('D MMMM')
       },
       to () {
-        return moment(this.period.to).format('D MMMM')
+        return this.period.to.format('D MMMM')
       },
       mailto () {
         return `mailto:${resume.basics.email}?subject=Stageplaats`

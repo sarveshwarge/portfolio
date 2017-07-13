@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import Copyright from '@/components/Footer/Copyright.vue'
-  import ScrollToTop from '@/components/Helpers/ScrollToTop.vue'
+  import Copyright from '@/components/Footer/Copyright'
+  import ScrollToTop from '@/components/Helpers/ScrollToTop'
 
   export default {
     name: 'portfolio-footer',

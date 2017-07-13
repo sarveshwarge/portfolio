@@ -22,7 +22,8 @@
 
 <script>
   import resume from '@/resume'
-  import Title from '@/components/Helpers/Title.vue'
+
+  import Title from '@/components/Helpers/Title'
   import Signature from '@/components/Introduction/Signature'
   import Information from '@/components/Introduction/Information'
 

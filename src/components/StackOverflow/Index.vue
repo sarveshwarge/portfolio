@@ -16,9 +16,9 @@
 <script>
   import axios from 'axios'
 
-  import Title from '@/components/Helpers/Title.vue'
-  import Text from '@/components/Helpers/Text.vue'
-  import Badge from '@/components/StackOverflow/Badge.vue'
+  import Title from '@/components/Helpers/Title'
+  import Text from '@/components/Helpers/Text'
+  import Badge from '@/components/StackOverflow/Badge'
 
   export default {
     name: 'portfolio-stack-overflow',

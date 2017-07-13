@@ -84,6 +84,7 @@
     "pug": "2.0.0-rc.2",
     "pug-html-loader": "1.1.5",
     "raw-loader": "0.5.1",
+    "resume-schema": "0.0.16",
     "rimraf": "2.6.0",
     "sass-loader": "6.0.6",
     "selenium-server": "3.0.1",

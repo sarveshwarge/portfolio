@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Experience from '@/components/CV/Experience.vue'
+  import Experience from '@/components/CV/Experience'
 
   export default {
     name: 'cv-experiences',
