@@ -7,6 +7,7 @@
     portfolio-internship(:period="period")
     portfolio-interests
     portfolio-whatpulse
+    portfolio-references
     portfolio-footer
 </template>
 
@@ -19,6 +20,7 @@
   import Whatpulse from '@/components/Whatpulse/Index.vue'
   import Interests from '@/components/Interests/Index.vue'
   import Footer from '@/components/Footer/Index.vue'
+  import References from '@/components/References/Index.vue'
 
   export default {
     name: 'portfolio-main',
@@ -38,6 +40,7 @@
       portfolioCv: CV,
       portfolioWhatpulse: Whatpulse,
       portfolioInterests: Interests,
+      portfolioReferences: References,
       portfolioFooter: Footer
     }
   }

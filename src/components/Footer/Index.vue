@@ -1,9 +1,7 @@
 <template lang="pug">
   footer.footer
-    .container-fluid
-      .row
-        .col.text-center
-          //footer-scroll-to-top
+    .container-fluid.p-5.bg-midnight-blue
+      .container
     footer-copyright
 </template>
 
