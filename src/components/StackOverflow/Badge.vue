@@ -14,7 +14,7 @@
     },
     computed: {
       rank () {
-        return this.badge.rank.toLowerCase()
+        return `badge-${this.badge.rank.toLowerCase()}`
       },
       name () {
         return this.badge.name
@@ -33,15 +33,15 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  .bronze {
+  .badge-bronze {
     color: rgb(204, 160, 125);
   }
 
-  .silver {
+  .badge-silver {
     color: rgb(175, 179, 183);
   }
 
-  .gold {
+  .badge-gold {
     color: rgb(254, 203, 9);
   }
 </style>
