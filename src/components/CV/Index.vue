@@ -16,8 +16,8 @@
 <script>
   import resume from '@/resume'
 
-  import Title from '@/components/Helpers/Title.vue'
-  import Experiences from '@/components/CV/Experiences.vue'
+  import Title from '@/components/Helpers/Title'
+  import Experiences from '@/components/CV/Experiences'
   import Button from '@/components/Helpers/Button'
 
   export default {

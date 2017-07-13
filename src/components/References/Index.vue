@@ -10,7 +10,7 @@
 
 <script>
   import resume from '@/resume'
-  import Title from '@/components/Helpers/Title.vue'
+  import Title from '@/components/Helpers/Title'
 
   export default {
     name: 'portfolio-references',

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import Image from '@/components/Header/Image.vue'
+  import Image from '@/components/Header/Image'
 
   export default {
     name: 'portfolio-header',

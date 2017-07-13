@@ -14,8 +14,8 @@
 <script>
   import resume from '@/resume'
 
-  import Title from '@/components/Helpers/Title.vue'
-  import Interest from '@/components/Interests/Interest.vue'
+  import Title from '@/components/Helpers/Title'
+  import Interest from '@/components/Interests/Interest'
 
   export default {
     name: 'portfolio-interests',

@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import Text from '@/components/Helpers/Text.vue'
-  import Stat from '@/components/Whatpulse/Stat.vue'
+  import Text from '@/components/Helpers/Text'
+  import Stat from '@/components/Whatpulse/Stat'
 
   export default {
     name: 'portfolio-whatpulse',

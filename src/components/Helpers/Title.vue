@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import Border from '@/components/Helpers/Border.vue'
+  import Border from '@/components/Helpers/Border'
 
   export default {
     name: 'portfolio-title',
