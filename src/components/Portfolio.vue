@@ -29,8 +29,8 @@
     data () {
       return {
         iternship: {
-          from: moment('2018-02-05'),
-          to: moment('2018-07-06')
+          from: moment('2018-02-05'), // TODO: check if this date is correct.
+          to: moment('2018-07-06')    // TODO: check if this date is correct.
         }
       }
     },
