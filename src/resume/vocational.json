@@ -1,0 +1,39 @@
+{
+  "vocational": [
+    {
+      "issuingAuthority": "",
+      "website": "",
+      "accreditations":[
+        {
+          "title": "",
+          "website": "",
+          "verification": "",
+          "achievedDate": "",
+          "expireDate": "",
+          "doesNotExpire": ""
+        }
+      ],
+      "exams": [
+        {
+          "code": "",
+          "title": "",
+          "website": "",
+          "verification": "",
+          "achievedDate": "",
+          "score": "",
+          "expireDate": "",
+          "doesNotExpire": ""
+        }
+      ],
+      "courses": [
+        {
+          "title": "",
+          "trainingProvider": "",
+          "providerWebsite": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ]
+    }
+  ]
+}
