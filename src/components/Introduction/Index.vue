@@ -7,15 +7,22 @@
         .row.my-5
           .col
             introduction-information(label="Functie", :value="label")
+
             introduction-information(label="E-mailadres")
               a.silver.lh-2(:href="`mailto:${email}`", v-html="email")
+
             introduction-information(label="Mobiel")
               a.silver.lh-2(:href="`tel:${mobile}`", v-html="mobile")
+
             introduction-information(label="Adres")
-              p.silver.lh-2
+              p.mb-0.silver.lh-2
                 span.d-block(v-html="location.address")
                 span.d-block(v-html="`${location.postalCode} ${location.city}`")
                 span.d-block(v-html="location.region")
+
+            introduction-information(label="talen")
+              introduction-languages
+
           .col
             p.silver.fw2.lh-2(v-html="summary")
             introduction-signature(:name="name")
@@ -27,13 +34,15 @@
   import Title from '@/components/Helpers/Title'
   import Signature from '@/components/Introduction/Signature'
   import Information from '@/components/Introduction/Information'
+  import Languages from '@/components/Introduction/Languages'
 
   export default {
     name: 'portfolio-introduction',
     components: {
       IntroductionInformation: Information,
       IntroductionSignature: Signature,
-      introductionTitle: Title
+      introductionTitle: Title,
+      introductionLanguages: Languages
     },
     computed: {
       name () {
@@ -53,6 +62,9 @@
       },
       location () {
         return resume.basics.location
+      },
+      languages () {
+        return resume.languages
       }
     }
   }
