@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.copyright
+  section#copyright
     .container-fluid.bg-wet-asphalt
       .container
         .row.text-center

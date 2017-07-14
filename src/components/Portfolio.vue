@@ -1,5 +1,5 @@
 <template lang="pug">
-  .h-100
+  #portfolio.h-100
     portfolio-header
     portfolio-introduction
     portfolio-stack-overflow
@@ -54,7 +54,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>

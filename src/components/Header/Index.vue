@@ -1,5 +1,5 @@
 <template lang="pug">
-  header.h-100
+  header#header.h-100
     portfolio-menu
     .container-fluid.bg-clouds.bg-image.h-75
     portfolio-image

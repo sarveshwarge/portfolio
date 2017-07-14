@@ -1,5 +1,9 @@
 <template lang="pug">
-
+  span
+    b-tooltip(v-for="language in languages",
+              :debounce="0",
+              :content="language.fluency")
+      span.mr-1.flag-icon(:class="flag(language.language)")
 </template>
 
 <script>
@@ -11,6 +15,18 @@
       languages () {
         return resume.languages
       }
+    },
+    methods: {
+      flag (language) {
+        return {
+          nederlands: 'flag-icon-nl',
+          engels: 'flag-icon-us'
+        }[language.toLowerCase()]
+      }
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  @import "../../../node_modules/flag-icon-css/css/flag-icon.min.css";
+</style>

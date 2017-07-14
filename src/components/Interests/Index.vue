@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.interests
+  section#interests
     .container-fluid.bg-clouds.p-5
       .container.mb-3
         interests-title(title="Interesses",

@@ -1,23 +1,45 @@
 <template lang="pug">
-  section.references
+  section#certificates
     .container-fluid.p-5
       .container
-        references-title(title="Certificaten",
-                         subtitle="Lorem ipsum dolor sit amet")
+        certificates-title(title="Certificaten",
+                           subtitle="Lorem ipsum dolor sit amet")
+
+        experiences(v-for="(vocational, index) in vocationals",
+                    :title="vocational.issuingAuthority",
+                    :experiences="vocational.accreditations",
+                    :key="index")
 </template>
 
 <script>
+  import _ from 'lodash'
   import resume from '@/resume'
   import Title from '@/components/Helpers/Title'
+  import Experiences from '@/components/Experiences/Index'
 
   export default {
     name: 'portfolio-certificates',
     components: {
-      referencesTitle: Title
+      certificatesTitle: Title,
+      experiences: Experiences
     },
     computed: {
-      certificates () {
-        return resume.projects
+      vocationals () {
+        return _.map(resume.vocational, (vocational) => {
+          vocational.accreditations = _.map(vocational.accreditations, (accreditations) => {
+            return {
+              title: accreditations.title,
+              subtitle: 'Certificaat',
+              summary: null,
+              start: accreditations.achievedDate,
+              end: accreditations.expireDate,
+              icon: 'fa-certificate',
+              url: accreditations.verification,
+              doesNotExpire: accreditations.doesNotExpire
+            }
+          })
+          return vocational
+        })
       }
     }
   }

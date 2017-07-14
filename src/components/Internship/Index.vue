@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.internship
+  section#internship
     .container-fluid.bg-midnight-blue.p-5
       .container.text-center
         h1.h2.text-white.fw5 Momenteel ben ik op zoek naar een stageplaats.

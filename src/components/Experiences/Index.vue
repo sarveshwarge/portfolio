@@ -5,14 +5,14 @@
     .col
       .row
         .col-12(v-for="experience in experiences")
-          cv-experience(:experience="experience")
+          experience(:experience="experience")
 </template>
 
 <script>
-  import Experience from '@/components/CV/Experience'
+  import Experience from '@/components/Experiences/Experience'
 
   export default {
-    name: 'cv-experiences',
+    name: 'experiences',
     props: {
       title: {
         required: true,
@@ -24,7 +24,7 @@
       }
     },
     components: {
-      cvExperience: Experience
+      Experience: Experience
     }
   }
 </script>

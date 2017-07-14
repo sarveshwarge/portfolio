@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.footer
+  footer#footer
     .container-fluid.p-5.bg-midnight-blue
       .container
     footer-copyright
