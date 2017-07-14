@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.references
+  section#certificates
     .container-fluid.p-5
       .container
         references-title(title="Certificaten",

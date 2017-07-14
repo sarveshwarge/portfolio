@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.cv
+  section#cv
     .container.pt-5
       cv-title(title="Curriculum Vitae",
                subtitle="Hier heb ik mijn ervaringen opgedaan")
