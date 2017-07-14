@@ -5,18 +5,18 @@
       "website": "https://www.udemy.com/",
       "accreditations":[
         {
-          "title": "Vue JS - Mastering Web Apps",
-          "website": "https://www.udemy.com/vue-web-apps/",
-          "verification": "./assets/vocational/udemy/UC-HO61683N.pdf",
-          "achievedDate": "2017-05-12",
+          "title": "Vue JS 2 - The Complete Guide",
+          "website": "https://www.udemy.com/vuejs-2-the-complete-guide",
+          "verification": "/static/vocational/udemy/UC-ZABTRLUO.pdf",
+          "achievedDate": "2017-06-07",
           "expireDate": "",
           "doesNotExpire": "true"
         },
         {
-          "title": "Vue JS 2 - The Complete Guide",
-          "website": "https://www.udemy.com/vuejs-2-the-complete-guide",
-          "verification": "./assets/vocational/udemy/UC-ZABTRLUO.pdf",
-          "achievedDate": "2017-06-07",
+          "title": "Vue JS - Mastering Web Apps",
+          "website": "https://www.udemy.com/vue-web-apps/",
+          "verification": "/static/vocational/udemy/UC-HO61683N.pdf",
+          "achievedDate": "2017-05-12",
           "expireDate": "",
           "doesNotExpire": "true"
         }
@@ -50,7 +50,7 @@
         {
           "title": "Microsoft Certified Professional",
           "website": "https://www.microsoft.com/nl-nl/learning/microsoft-certified-professional.aspx",
-          "verification": "./assets/vocational/microsoft/E867-7660.pdf",
+          "verification": "/static/vocational/microsoft/E867-7660.pdf",
           "achievedDate": "2014-07-01",
           "expireDate": "",
           "doesNotExpire": "true"
@@ -58,7 +58,7 @@
         {
           "title": "Microsoft Technology Associate: Web Development Fundamentals",
           "website": "https://www.microsoft.com/nl-nl/learning/mta-certification.aspx",
-          "verification": "./assets/vocational/microsoft/E867-7659.pdf",
+          "verification": "/static/vocational/microsoft/E867-7659.pdf",
           "achievedDate": "2014-07-01",
           "expireDate": "",
           "doesNotExpire": "true"

@@ -1,0 +1,73 @@
+<template lang="pug">
+  .row
+    .col-8
+      p
+        strong.text-uppercase.midnight-blue(v-html="title")
+      p(v-if="website")
+        a.concrete(:href="website", target="_blank")
+          i.fa.mr-2(:class="icon")
+          span(v-html="subtitle")
+      p.concrete(v-else="")
+        i.fa.mr-2(:class="icon")
+        span(v-html="subtitle")
+      p.text-justify.silver.summary.fw1.lh-2(v-html="summary")
+      hr.mt-3.mb-5
+    .col-4.text-right.small.silver
+      p
+        i.fa.fa-calendar.mr-2
+        span(v-html="date")
+</template>
+
+<script>
+  import moment from 'moment'
+
+  export default {
+    name: 'experience',
+    props: {
+      experience: {
+        type: Object,
+        required: true
+      }
+    },
+    computed: {
+      title () {
+        return this.experience.title
+      },
+      subtitle () {
+        return this.experience.subtitle
+      },
+      website () {
+        return this.experience.url
+      },
+      icon () {
+        return this.experience.icon
+      },
+      summary () {
+        return this.experience.summary
+      },
+      date () {
+        return this.experience.doesNotExpire ? this.start : `${this.start} — ${this.end}`
+      },
+      start () {
+        return moment(this.experience.start).format('MMMM YYYY')
+      },
+      end () {
+        return (this.experience.end === '') ? 'Huidig' : moment(this.experience.end).format('MMMM YYYY')
+      }
+    },
+    created () {
+      moment.locale('nl')
+    }
+  }
+</script>
+
+<style lang="scss" scoped="scoped">
+  @import "../../../node_modules/flat-ui-colors-sass/flat-colors";
+
+  a {
+   &:hover {
+     text-decoration: none;
+     color: $flat-asbestos;
+   }
+ }
+</style>
