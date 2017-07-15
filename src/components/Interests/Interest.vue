@@ -23,6 +23,9 @@
       },
       keywords () {
         return this.interest.keywords
+      },
+      hasKeywords () {
+        return this.keywords.length > 0
       }
     }
   }
