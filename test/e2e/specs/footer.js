@@ -10,7 +10,7 @@ module.exports = {
 
     browser
       .url(devServer)
-      .waitForElementVisible('#app', 30000)
+      .waitForElementVisible('#app', 5000)
       .end()
   }
 }
