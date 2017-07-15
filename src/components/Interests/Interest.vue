@@ -12,10 +12,6 @@
         required: true,
         type: Object
       },
-      index: {
-        required: true,
-        type: Number
-      },
       icon: {
         required: true,
         type: String
