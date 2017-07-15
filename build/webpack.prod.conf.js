@@ -1,4 +1,5 @@
 var path = require('path')
+var glob = require('glob')
 var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
@@ -8,7 +9,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+var PurifyCSSPlugin = require('purifycss-webpack')
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -32,11 +34,28 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new UglifyJsPlugin({
-      compress: {
-        warnings: false
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
       },
-      sourceMap: true
+      mangle: {
+        keep_fnames: true,
+        screw_ie8: true
+      },
+      compress: {
+        warnings : false,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        negate_iife: false,
+        screw_ie8: true
+      },
+      sourceMap: false
     }),
     // extract css into its own file
     new ExtractTextPlugin({
@@ -47,6 +66,15 @@ var webpackConfig = merge(baseWebpackConfig, {
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true
+      }
+    }),
+    new PurifyCSSPlugin({
+      paths: glob.sync(
+        path.join(process.cwd(), "src/**/*.vue")
+      ),
+      minimize: true,
+      purifyOptions: {
+        whitelist: ['flag-icon-nl', 'flag-icon-us']
       }
     }),
     // generate dist index.html with correct asset hash for caching.
@@ -95,7 +123,40 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, '../src/assets/images/logo/favicon.png'),
+      appName: "CV + Portfolio",
+      appDescription: "Mijn persoonlijke CV + portfolio",
+      developerName: "Maarten Paauw",
+      developerURL: "https://www.maartenpaauw.com/",
+      background: "#FFFFFF",
+      theme_color: "#FFFFFF",
+      display: "standalone",
+      version: "1.0",
+      logging: false,
+      online: false,
+      preferOnline: false,
+      start_url: "/",
+      prefix: "static/icons/",
+      emitStats: false,
+      persistentCache: true,
+      inject: true,
+      title: "CV + Portfolio",
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
+      }
+    })
   ]
 })
 
