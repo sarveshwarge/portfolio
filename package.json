@@ -1,17 +1,29 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Maarten Paauw <maartenpaauw@gmail.com>",
+  "description": "Mijn persoonlijk CV + portfolio website",
+  "author": {
+    "name": "Maarten Paauw",
+    "email": "maartenpaauw@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/maartenpaauw/portfolio/issues",
+    "email": "maartenpaauw@gmail.com"
+  },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maartenpaauw/portfolio"
+  },
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "test": "yarn run unit && yarn run e2e",
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "axios": "0.16.2",
@@ -50,7 +62,7 @@
     "cross-env": "4.0.0",
     "cross-spawn": "5.0.1",
     "css-loader": "0.28.0",
-    "eslint": "3.19.0",
+    "eslint": "^4.2.0",
     "eslint-config-standard": "6.2.1",
     "eslint-friendly-formatter": "2.0.7",
     "eslint-loader": "1.7.1",
@@ -75,6 +87,7 @@
     "karma-sourcemap-loader": "0.3.7",
     "karma-spec-reporter": "0.0.30",
     "karma-webpack": "2.0.2",
+    "lint-staged": "^4.0.1",
     "lolex": "1.5.2",
     "mocha": "3.2.0",
     "nightwatch": "0.9.12",
@@ -83,10 +96,12 @@
     "optimize-css-assets-webpack-plugin": "1.3.0",
     "ora": "1.2.0",
     "phantomjs-prebuilt": "2.1.14",
+    "pre-commit": "^1.2.2",
     "pug": "2.0.0-rc.2",
     "pug-html-loader": "1.1.5",
+    "pug-lint-vue": "^0.1.3",
     "raw-loader": "0.5.1",
-    "resume-schema": "0.0.16",
+    "resume-schema": "jsonresume/resume-schema#v1.0.0",
     "rimraf": "2.6.0",
     "sass-loader": "6.0.6",
     "selenium-server": "3.0.1",
@@ -95,6 +110,9 @@
     "sinon": "2.1.0",
     "sinon-chai": "2.8.0",
     "style-loader": "^0.18.2",
+    "stylelint": "^7.13.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-html": "^1.0.0",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.1",
     "url-loader": "0.5.8",
@@ -107,6 +125,10 @@
     "webpack-hot-middleware": "2.18.0",
     "webpack-merge": "4.1.0"
   },
+  "greenkeeper": {
+    "branchPrefix": "dependency-update-",
+    "label": "dependency-update"
+  },
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
@@ -115,5 +137,23 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.vue": [
+      "eslint",
+      "pug-lint-vue",
+      "stylelint --syntax scss"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-html"
+    ],
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null
+    }
+  }
 }
