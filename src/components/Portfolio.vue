@@ -34,7 +34,7 @@
       return {
         iternship: {
           from: new Date('2018-02-05'), // TODO: check if this date is correct.
-          to: new Date('2018-07-06')    // TODO: check if this date is correct.
+          to: new Date('2018-07-06') // TODO: check if this date is correct.
         }
       }
     },
