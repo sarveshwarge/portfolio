@@ -6,13 +6,16 @@
                            :subtitle="label")
         .row.my-5
           .col
-            introduction-information(label="Functie", :value="label")
+            introduction-information(label="Functie",
+                                     :value="label")
 
             introduction-information(label="E-mailadres")
-              a.silver.lh-2(:href="`mailto:${email}`", v-html="email")
+              a.silver.lh-2(:href="`mailto:${email}`",
+                            v-html="email")
 
             introduction-information(label="Mobiel")
-              a.silver.lh-2(:href="`tel:${mobile}`", v-html="mobile")
+              a.silver.lh-2(:href="`tel:${mobile}`",
+                            v-html="mobile")
 
             introduction-information(label="talen")
               introduction-languages
@@ -22,10 +25,6 @@
                 span.d-block(v-html="location.address")
                 span.d-block(v-html="`${location.postalCode} ${location.city}`")
                 span.d-block(v-html="location.region")
-
-
-            <!--introduction-information(label="social")-->
-              <!--introduction-social-->
 
           .col
             p.silver.fw2.lh-2(v-html="summary")
@@ -39,7 +38,6 @@
   import Signature from '@/components/Introduction/Signature'
   import Information from '@/components/Introduction/Information'
   import Languages from '@/components/Introduction/Languages'
-  import Social from '@/components/Introduction/Social'
 
   export default {
     name: 'portfolio-introduction',
@@ -47,8 +45,7 @@
       IntroductionInformation: Information,
       IntroductionSignature: Signature,
       introductionTitle: Title,
-      introductionLanguages: Languages,
-      introductionSocial: Social
+      introductionLanguages: Languages
     },
     computed: {
       name () {

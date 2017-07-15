@@ -1,8 +1,11 @@
 <template lang="pug">
-  span
-    a.mr-2(v-for="(profile, index) in profiles",
-      :key="index")
-      i.midnight-blue.fa(:class="icon(profile.network)")
+  .row
+    .col.text-center
+      a.mr-2.concrete(v-for="(profile, index) in profiles",
+                      :key="index",
+                      :href="profile.url",
+                      target="_blank")
+        i.fa(:class="icon(profile.network)")
 </template>
 
 <script>
@@ -10,7 +13,7 @@
   import resume from '@/resume'
 
   export default {
-    name: 'social',
+    name: 'footer-social',
     computed: {
       profiles () {
         return resume.basics.profiles
