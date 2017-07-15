@@ -5,7 +5,7 @@
                       :key="index",
                       :href="profile.url",
                       target="_blank")
-        i.fa(:class="icon(profile.network)")
+        i.fa.fa-lg(:class="icon(profile.network)")
 </template>
 
 <script>
