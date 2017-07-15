@@ -6,7 +6,7 @@ describe('JSON Resume', () => {
   it('Should be a valid json resume file', () => {
     new ZSchema().validate(resume, schema, (err, valid) => {
       expect(err).to.be.an('undefined')
-      expect(valid).to.be.true
+      expect(valid).to.be.equal(true)
     })
   })
 })
