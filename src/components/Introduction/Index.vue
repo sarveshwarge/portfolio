@@ -6,22 +6,25 @@
                            :subtitle="label")
         .row.my-5
           .col
-            introduction-information(label="Functie", :value="label")
+            introduction-information(label="Functie",
+                                     :value="label")
 
             introduction-information(label="E-mailadres")
-              a.silver.lh-2(:href="`mailto:${email}`", v-html="email")
+              a.silver.lh-2(:href="`mailto:${email}`",
+                            v-html="email")
 
             introduction-information(label="Mobiel")
-              a.silver.lh-2(:href="`tel:${mobile}`", v-html="mobile")
+              a.silver.lh-2(:href="`tel:${mobile}`",
+                            v-html="mobile")
+
+            introduction-information(label="talen")
+              introduction-languages
 
             introduction-information(label="Adres")
               p.mb-0.silver.lh-2
                 span.d-block(v-html="location.address")
                 span.d-block(v-html="`${location.postalCode} ${location.city}`")
                 span.d-block(v-html="location.region")
-
-            introduction-information(label="talen")
-              introduction-languages
 
           .col
             p.silver.fw2.lh-2(v-html="summary")

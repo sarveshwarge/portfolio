@@ -8,8 +8,7 @@
           interest(v-for="(interest, index) in interests",
                    :key="index",
                    :interest="interest",
-                   :icon="icon(index)",
-                   :index="index")
+                   :icon="icon(index)")
 </template>
 
 <script>

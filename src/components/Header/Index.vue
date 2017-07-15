@@ -20,7 +20,7 @@
 
 <style lang="scss" scoped="scoped">
   .bg-image {
-    background: url("../../assets/background.jpeg") no-repeat center center;
+    background: url("../../assets/images/background.jpeg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

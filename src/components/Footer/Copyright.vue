@@ -6,7 +6,9 @@
           .col
             p.m-2.small.midnight-blue
               i.fa.fa-copyright.mr-2
-              span.mr-2.b(v-html="name")
+              a.midnight-blue.mr-2.b(v-html="name",
+                                     :href="mailto",
+                                     target="_blank")
               span(v-html="year")
 </template>
 
@@ -18,6 +20,9 @@
     computed: {
       name () {
         return resume.basics.name
+      },
+      mailto () {
+        return `mailto:${resume.basics.email}`
       },
       year () {
         return new Date().getFullYear()

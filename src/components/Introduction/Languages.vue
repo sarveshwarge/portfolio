@@ -1,9 +1,10 @@
 <template lang="pug">
   span
-    b-tooltip(v-for="language in languages",
+    b-tooltip(v-for="(language, index) in languages",
               :debounce="0",
-              :content="language.fluency")
-      span.mr-1.flag-icon(:class="flag(language.language)")
+              :content="language.fluency",
+              :key="index")
+      span.mr-1.mt-1.flag-icon(:class="flag(language.language)")
 </template>
 
 <script>
