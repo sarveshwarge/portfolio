@@ -1,7 +1,7 @@
 <template lang="pug">
   .col-12.text-center
     i.fa.mr-2.midnight-blue(v-for="(reference, index) in references",
-                            :class="icon(index)"
+                            :class="icon(index)",
                             :key="index")
 </template>
 

@@ -10,7 +10,7 @@
       p.concrete(v-else="")
         i.fa.mr-2(:class="icon")
         span(v-html="subtitle")
-      p.text-justify.silver.summary.fw1.lh-2(v-html="summary")
+      p.silver.summary.fw1.lh-2(v-html="summary")
       hr.mt-3.mb-5
     .col-4.text-right.small.silver
       p
@@ -65,9 +65,9 @@
   @import "../../../node_modules/flat-ui-colors-sass/flat-colors";
 
   a {
-   &:hover {
-     text-decoration: none;
-     color: $flat-asbestos;
-   }
- }
+    &:hover {
+      text-decoration: none;
+      color: $flat-asbestos;
+    }
+  }
 </style>
