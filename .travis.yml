@@ -22,6 +22,9 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 
+install:
+  - yarn install
+
 script:
   - yarn run test
   - yarn run build
