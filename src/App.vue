@@ -22,7 +22,7 @@
   // NPM
   @import "../node_modules/typeface-montserrat/index.css";
   @import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css";
-  @import "../node_modules/bootstrap/scss/bootstrap.scss";
+  @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
   @import "../node_modules/font-awesome/css/font-awesome.min.css";
 
   // Custom
