@@ -9,7 +9,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var PurifyCSSPlugin = require('purifycss-webpack')
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
@@ -66,15 +65,6 @@ var webpackConfig = merge(baseWebpackConfig, {
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true
-      }
-    }),
-    new PurifyCSSPlugin({
-      paths: glob.sync(
-        path.join(process.cwd(), "src/**/*.vue")
-      ),
-      minimize: true,
-      purifyOptions: {
-        whitelist: ['flag-icon-nl', 'flag-icon-us']
       }
     }),
     // generate dist index.html with correct asset hash for caching.
