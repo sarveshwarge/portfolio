@@ -217,10 +217,7 @@
     },
     {
       "name": "Apple",
-      "keywords": [
-        "iPhone",
-        "Macbook Pro"
-      ]
+      "keywords": []
     },
     {
       "name": "Films & Series",
@@ -228,10 +225,7 @@
     },
     {
       "name": "Games",
-      "keywords": [
-        "Counter Strike Global Offencive",
-        "Players Unknown Battleground"
-      ]
+      "keywords": []
     },
     {
       "name": "Muziek",
