@@ -198,6 +198,15 @@
         "CSS",
         "Javascript"
       ]
+    },
+    {
+      "name": "DTP",
+      "level": "Master", 
+      "keywords": [
+        "InDesign",
+        "Illustrator",
+        "Photoshop"
+      ]
     }
   ],
   "languages": [
