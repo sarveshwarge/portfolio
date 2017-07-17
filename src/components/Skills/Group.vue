@@ -10,6 +10,7 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   import Keyword from '@/components/Skills/Keyword'
 
   export default {
@@ -25,7 +26,9 @@
     },
     computed: {
       keywords () {
-        return this.skill.keywords
+        return _.sortBy(this.skill.keywords, (keyword) => {
+          return keyword
+        })
       }
     }
   }
