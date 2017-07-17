@@ -8,14 +8,14 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'introduction-languages',
     computed: {
-      languages () {
-        return resume.languages
-      }
+      ...mapGetters('resume', [
+        'languages'
+      ])
     },
     methods: {
       flag (language) {

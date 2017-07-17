@@ -11,8 +11,7 @@
 
 <script>
   import moment from 'moment'
-
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
   import Button from '@/components/Helpers/Button'
 
   export default {
@@ -27,6 +26,9 @@
       PortfolioButton: Button
     },
     computed: {
+      ...mapGetters('basics', [
+        'email'
+      ]),
       from () {
         return moment(this.period.from).format('D MMMM')
       },
@@ -34,7 +36,7 @@
         return moment(this.period.to).format('D MMMM')
       },
       mailto () {
-        return `mailto:${resume.basics.email}?subject=Stageplaats`
+        return `mailto:${this.email}?subject=Stageplaats`
       }
     },
     created () {

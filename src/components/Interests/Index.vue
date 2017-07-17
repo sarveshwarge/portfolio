@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   import Title from '@/components/Helpers/Title'
   import Interest from '@/components/Interests/Interest'
@@ -24,9 +24,9 @@
       interest: Interest
     },
     computed: {
-      interests () {
-        return resume.interests
-      }
+      ...mapGetters('resume', [
+        'interests'
+      ])
     },
     methods: {
       icon (index) {

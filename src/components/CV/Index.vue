@@ -5,15 +5,15 @@
                subtitle="Hier heb ik mijn ervaringen opgedaan")
 
       cv-experiences(title="Opleidingen",
-                     :experiences="education")
+                     :experiences="_education")
 
       cv-experiences(title="Werkervaring",
-                     :experiences="work")
+                     :experiences="_work")
 </template>
 
 <script>
   import _ from 'lodash'
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   import Title from '@/components/Helpers/Title'
   import Experiences from '@/components/Experiences/Index'
@@ -27,8 +27,12 @@
       cvExperiences: Experiences
     },
     computed: {
-      work () {
-        return _.map(resume.work, (work) => {
+      ...mapGetters('resume', [
+        'work',
+        'education'
+      ]),
+      _work () {
+        return _.map(this.work, (work) => {
           return {
             title: work.position,
             subtitle: work.name,
@@ -40,8 +44,8 @@
           }
         })
       },
-      education () {
-        return _.map(resume.education, (education) => {
+      _education () {
+        return _.map(this.education, (education) => {
           return {
             title: education.area,
             subtitle: education.institution,

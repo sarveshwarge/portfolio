@@ -10,14 +10,14 @@
 
 <script>
   import slugify from 'slugify'
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'footer-social',
     computed: {
-      profiles () {
-        return resume.basics.profiles
-      }
+      ...mapGetters('basics', [
+        'profiles'
+      ])
     },
     methods: {
       icon (network) {

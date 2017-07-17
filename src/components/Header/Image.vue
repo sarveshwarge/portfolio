@@ -9,7 +9,7 @@
 
 <script>
   import Gravatar from 'vue-gravatar'
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'portfolio-image',
@@ -17,9 +17,9 @@
       vueGravatar: Gravatar
     },
     computed: {
-      email () {
-        return resume.basics.email
-      }
+      ...mapGetters('basics', [
+        'email'
+      ])
     }
   }
 </script>

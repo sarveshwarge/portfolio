@@ -2,23 +2,23 @@
   section#projects
     .container-fluid.p-5
       .container
-        references-title(title="Projecten",
-                         subtitle="Lorem ipsum dolor sit amet")
+       projects-title(title="Projecten",
+                      subtitle="Lorem ipsum dolor sit amet")
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
   import Title from '@/components/Helpers/Title'
 
   export default {
     name: 'portfolio-projects',
     components: {
-      referencesTitle: Title
+      projectsTitle: Title
     },
     computed: {
-      projects () {
-        return resume.projects
-      }
+      ...mapGetters('resume', [
+        'projects'
+      ])
     }
   }
 </script>
