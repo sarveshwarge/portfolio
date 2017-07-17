@@ -17,7 +17,8 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
+  
   import Title from '@/components/Helpers/Title'
   import Control from '@/components/References/Control'
   import Reference from '@/components/References/Reference'
@@ -37,9 +38,9 @@
       referencesReference: Reference
     },
     computed: {
-      references () {
-        return resume.references
-      },
+      ...mapGetters('resume', [
+        'references'
+      ]),
       reference () {
         return this.references[this.currentReference]
       }

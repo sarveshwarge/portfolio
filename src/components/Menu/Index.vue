@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'portfolio-menu',
@@ -33,9 +33,9 @@
       }
     },
     computed: {
-      name () {
-        return resume.basics.name
-      }
+      ...mapGetters('basics', [
+        'name'
+      ])
     }
   }
 </script>

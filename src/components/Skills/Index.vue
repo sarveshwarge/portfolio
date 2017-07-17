@@ -11,7 +11,8 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
+  
   import Title from '@/components/Helpers/Title'
   import Group from '@/components/Skills/Group'
 
@@ -22,9 +23,9 @@
       skillsGroup: Group
     },
     computed: {
-      skills () {
-        return resume.skills
-      }
+      ...mapGetters('resume', [
+        'skills'
+      ])
     }
   }
 </script>

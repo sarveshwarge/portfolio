@@ -14,8 +14,8 @@
                             v-html="email")
 
             introduction-information(label="Mobiel")
-              a.silver.lh-2(:href="`tel:${mobile}`",
-                            v-html="mobile")
+              a.silver.lh-2(:href="`tel:${phone}`",
+                            v-html="phone")
 
             introduction-information(label="talen")
               introduction-languages
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   import Title from '@/components/Helpers/Title'
   import Signature from '@/components/Introduction/Signature'
@@ -48,31 +48,14 @@
       introductionLanguages: Languages
     },
     computed: {
-      name () {
-        return resume.basics.name
-      },
-      label () {
-        return resume.basics.label
-      },
-      summary () {
-        return resume.basics.summary
-      },
-      email () {
-        return resume.basics.email
-      },
-      mobile () {
-        return resume.basics.phone
-      },
-      location () {
-        return resume.basics.location
-      },
-      languages () {
-        return resume.languages
-      }
+      ...mapGetters('basics', [
+        'name',
+        'label',
+        'summary',
+        'email',
+        'phone',
+        'location'
+      ])
     }
   }
 </script>
-
-<style lang="scss" scoped="scoped">
-
-</style>

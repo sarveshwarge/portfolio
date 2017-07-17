@@ -13,16 +13,17 @@
 </template>
 
 <script>
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'footer-copyright',
     computed: {
-      name () {
-        return resume.basics.name
-      },
+      ...mapGetters('basics', [
+        'name',
+        'email'
+      ]),
       mailto () {
-        return `mailto:${resume.basics.email}`
+        return `mailto:${this.email}`
       },
       year () {
         return new Date().getFullYear()

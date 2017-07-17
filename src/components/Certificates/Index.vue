@@ -13,7 +13,7 @@
 
 <script>
   import _ from 'lodash'
-  import resume from '@/resume'
+  import { mapGetters } from 'vuex'
   import Title from '@/components/Helpers/Title'
   import Experiences from '@/components/Experiences/Index'
 
@@ -24,8 +24,11 @@
       experiences: Experiences
     },
     computed: {
+      ...mapGetters('resume', [
+        'vocational'
+      ]),
       vocationals () {
-        return _.map(resume.vocational, (vocational) => {
+        return _.map(this.vocational, (vocational) => {
           vocational.accreditations = _.map(vocational.accreditations, (accreditations) => {
             return {
               title: accreditations.title,
