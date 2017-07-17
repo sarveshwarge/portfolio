@@ -6,7 +6,8 @@
     .row
       .col-12.mt-2
         keyword(v-for="(keyword, index) in keywords",
-                :keyword="keyword")
+                :keyword="keyword",
+                :key="index")
 </template>
 
 <script>
