@@ -8,11 +8,13 @@
           interest(v-for="(interest, index) in interests",
                    :key="index",
                    :interest="interest",
-                   :icon="icon(index)")
+                   :icon="icon(interest.name)")
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
+  import _ from 'lodash'
+  import slugify from 'slugify'
 
   import Title from '@/components/Helpers/Title'
   import Interest from '@/components/Interests/Interest'
@@ -24,22 +26,27 @@
       interest: Interest
     },
     computed: {
-      ...mapGetters('resume', [
-        'interests'
-      ])
+      ...mapGetters('resume', {
+        _interests: 'interests'
+      }),
+      interests () {
+        return _.sortBy(this._interests, (interest) => {
+          return interest.name
+        })
+      }
     },
     methods: {
-      icon (index) {
-        return [
-          'fa-code',
-          'fa-apple',
-          'fa-film',
-          'fa-gamepad',
-          'fa-music',
-          'fa-child',
-          'fa-coffee',
-          'fa-plane'
-        ][index]
+      icon (name) {
+        return {
+          'apple': 'fa-apple',
+          'films-and-series': 'fa-film',
+          'games': 'fa-gamepad',
+          'gitaar-spelen': 'fa-child',
+          'koffie': 'fa-coffee',
+          'muziek': 'fa-music',
+          'programmeren': 'fa-code',
+          'reizen': 'fa-plane'
+        }[slugify(name.toLowerCase())]
       }
     }
   }
