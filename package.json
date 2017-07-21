@@ -27,7 +27,6 @@
     "e2e": "node test/e2e/runner.js",
     "test": "yarn run unit && yarn run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "lint-staged": "lint-staged",
     "commitmsg": "commitlint -e",
     "precommit": "lint-staged"
   },
