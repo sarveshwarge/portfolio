@@ -221,10 +221,6 @@
   ],
   "interests": [
     {
-      "name": "Programmeren",
-      "keywords": []
-    },
-    {
       "name": "Apple",
       "keywords": []
     },
@@ -237,15 +233,19 @@
       "keywords": []
     },
     {
-      "name": "Muziek",
-      "keywords": []
-    },
-    {
       "name": "Gitaar Spelen",
       "keywords": []
     },
     {
       "name": "Koffie",
+      "keywords": []
+    },
+    {
+      "name": "Muziek",
+      "keywords": []
+    },
+    {
+      "name": "Programmeren",
       "keywords": []
     },
     {
