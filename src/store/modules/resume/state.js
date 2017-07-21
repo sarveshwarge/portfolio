@@ -1,3 +1,3 @@
-import resume from '../../../resume'
+import resume from '@/resume'
 
 export default resume

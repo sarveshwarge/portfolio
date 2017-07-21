@@ -1,26 +1,41 @@
 <template lang="pug">
   .col-12.text-center
-    i.fa.mr-2.midnight-blue(v-for="(reference, index) in references",
-                            :class="icon(index)",
+    i.fa.midnight-blue(v-for="(reference, index) in references",
+                            :class="classes(index)",
+                            @click="click(index)",
                             :key="index")
 </template>
 
 <script>
+  import { mapActions, mapGetters } from 'vuex'
+
   export default {
     name: 'references-indicators',
     props: {
       references: {
         required: true,
         type: Array
-      },
-      current: {
-        required: true,
-        type: Number
       }
     },
+    computed: {
+      ...mapGetters([
+        'index'
+      ])
+    },
     methods: {
-      icon (index) {
-        return index === this.current ? 'fa-dot-circle-o' : 'fa-circle-o'
+      ...mapActions([
+        'specific'
+      ]),
+      classes (index) {
+        return [
+          index === this.index ? 'fa-dot-circle-o' : 'fa-circle-o',
+          {
+            'mr-1': !(index === this.references.length - 1)
+          }
+        ]
+      },
+      click (index) {
+        this.specific(index)
       }
     }
   }

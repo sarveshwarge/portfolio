@@ -3,17 +3,16 @@
     .container-fluid.p-5
       .container
         references-title(title="Referenties",
-                         subtitle="Lorem ipsum dolor sit amet")
+                         subtitle="Wat vinden mensen van mij?")
         .row
-          references-control(direction="left")
+          references-control(direction="previous")
           references-reference(v-for="(reference, index) in references",
                                :reference="reference",
-                               :visible="visible(index)",
+                               :index="index",
                                :key="index")
-          references-control(direction="right")
+          references-control(direction="next")
         .row.mb-4
-          references-indicators(:references="references",
-                                :current="current")
+          references-indicators(:references="references")
 </template>
 
 <script>
@@ -26,11 +25,6 @@
 
   export default {
     name: 'portfolio-references',
-    data () {
-      return {
-        current: 0
-      }
-    },
     components: {
       referencesTitle: Title,
       referencesControl: Control,
@@ -40,15 +34,7 @@
     computed: {
       ...mapGetters('resume', [
         'references'
-      ]),
-      reference () {
-        return this.references[this.currentReference]
-      }
-    },
-    methods: {
-      visible (index) {
-        return this.current === index
-      }
+      ])
     }
   }
 </script>
