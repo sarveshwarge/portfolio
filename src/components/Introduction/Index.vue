@@ -1,5 +1,6 @@
 <template lang="pug">
-  section(:id="id")
+  section(:id="id", 
+          v-observe-visibility="setActive")
     .container-fluid.p-5
       .container
         introduction-title(:title="name",
@@ -39,6 +40,8 @@
   import Information from '@/components/Introduction/Information'
   import Languages from '@/components/Introduction/Languages'
 
+  import active from '@/mixins/active'
+
   export default {
     name: 'portfolio-introduction',
     data () {
@@ -61,6 +64,9 @@
         'phone',
         'location'
       ])
-    }
+    },
+    mixins: [
+      active
+    ]
   }
 </script>

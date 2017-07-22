@@ -61,10 +61,11 @@
   }
   
   .nav-link {
-    padding: 1.25rem 0 !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1.25rem;
 
     &.active {
-      border-bottom: solid 4px white;
+      border-bottom: solid 0.25rem white;
     }
   }
   

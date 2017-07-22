@@ -1,5 +1,6 @@
 <template lang="pug">
-  section(:id="id")
+  section(:id="id",
+          v-observe-visibility="setActive")
     .container-fluid.p-5
       .container
         certificates-title(title="Certificaten",
@@ -14,8 +15,11 @@
 <script>
   import _ from 'lodash'
   import { mapGetters } from 'vuex'
+
   import Title from '@/components/Helpers/Title'
   import Experiences from '@/components/Experiences/Index'
+
+  import active from '@/mixins/active'
 
   export default {
     name: 'portfolio-certificates',
@@ -49,6 +53,9 @@
           return vocational
         })
       }
-    }
+    },
+    mixins: [
+      active
+    ]
   }
 </script>
