@@ -1,5 +1,5 @@
 <template lang="pug">
-  header#header.h-100
+  header.h-100(:id="id")
     portfolio-menu(:variant="variant")
     .container-fluid.bg-clouds.bg-image.h-75(v-observe-visibility="setVariant")
       .row.h-100.align-items-center
@@ -19,7 +19,8 @@
     name: 'portfolio-header',
     data () {
       return {
-        variant: 'none'
+        variant: 'none',
+        id: 'header'
       }
     },
     components: {
@@ -32,14 +33,14 @@
         'label'
       ]),
       title () {
-        return `Hallo, ik ben ${this.name.split(' ')[0]}!`
+        return `Hallo, ik ben ${this.name.split(' ')[0]}`
       },
       subtitle () {
-        return `Een ${this.label}.`
+        return `Een ${this.label}`
       }
     },
     methods: {
-      setVariant: function (isVisible, entry) {
+      setVariant (isVisible, entry) {
         this.variant = isVisible ? 'none' : 'midnight-blue'
       }
     }

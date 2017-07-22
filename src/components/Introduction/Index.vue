@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#introduction
+  section(:id="id")
     .container-fluid.p-5
       .container
         introduction-title(:title="name",
@@ -41,6 +41,11 @@
 
   export default {
     name: 'portfolio-introduction',
+    data () {
+      return {
+        id: 'introduction'
+      }
+    },
     components: {
       IntroductionInformation: Information,
       IntroductionSignature: Signature,

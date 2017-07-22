@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#certificates
+  section(:id="id")
     .container-fluid.p-5
       .container
         certificates-title(title="Certificaten",
@@ -19,6 +19,11 @@
 
   export default {
     name: 'portfolio-certificates',
+    data () {
+      return {
+        id: 'certificates'
+      }
+    },
     components: {
       certificatesTitle: Title,
       experiences: Experiences

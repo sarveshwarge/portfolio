@@ -1,5 +1,5 @@
 export default {
-  active: 0,
+  active: -1,
   items: [
     {
       name: 'Ik',

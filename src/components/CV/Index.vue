@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#cv
+  section(:id="id")
     .container.pt-5
       cv-title(title="Curriculum Vitae",
                subtitle="Hier heb ik mijn ervaringen opgedaan")
@@ -25,6 +25,11 @@
       cvButton: Button,
       cvTitle: Title,
       cvExperiences: Experiences
+    },
+    data () {
+      return {
+        id: 'cv'
+      }
     },
     computed: {
       ...mapGetters('resume', [
