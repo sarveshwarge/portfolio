@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#references
+  section(:id="id")
     .container-fluid.p-5
       .container
         references-title(title="Referenties",
@@ -25,6 +25,11 @@
 
   export default {
     name: 'portfolio-references',
+    data () {
+      return {
+        id: 'references'
+      }
+    },
     components: {
       referencesTitle: Title,
       referencesControl: Control,

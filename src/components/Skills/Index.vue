@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#skills
+  section(:id="id")
     .container-fluid.p-5
       .container.mb-3
         skills-title(title="Vaardigheden",
@@ -18,6 +18,11 @@
 
   export default {
     name: 'portfolio-skills',
+    data () {
+      return {
+        id: 'skills'
+      }
+    },
     components: {
       skillsTitle: Title,
       skillsGroup: Group
