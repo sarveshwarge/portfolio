@@ -191,21 +191,29 @@
   "publications": [],
   "skills": [
     {
-      "name": "Web Development",
+      "name": "Full Stack Development",
       "level": "Master",
       "keywords": [
         "HTML",
         "CSS",
-        "Javascript"
+        "Javascript",
+        "Python",
+        "MySQL",
+        "Node",
+        "Git",
+        "PHP",
+        "Java"
       ]
     },
     {
-      "name": "DTP",
+      "name": "DTP Allround",
       "level": "Master", 
       "keywords": [
-        "InDesign",
-        "Illustrator",
-        "Photoshop"
+        "Adobe InDesign CC",
+        "Adobe Illustrator CC",
+        "Adobe Photoshop CC",
+        "Adobe Bridge CC",
+        "Adobe Acrobat DC"
       ]
     }
   ],
@@ -266,7 +274,7 @@
   "projects": [
     {
       "name": "Nummering",
-      "description": "Een gemakkelijke data merge tool voor InDesign",
+      "description": "Een gemakkelijke data merge tool voor InDesign.",
       "highlights": [],
       "keywords": [
         "Web Development"
