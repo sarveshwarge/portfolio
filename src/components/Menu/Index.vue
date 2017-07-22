@@ -1,19 +1,20 @@
 <template lang="pug">
-  b-navbar(fixed="top",
-           toggle-breakpoint="md",
-           :toggleable="true")
+  b-navbar.py-2(fixed="top",
+                toggle-breakpoint="md",
+                variant="midnight-blue",
+                :toggleable="true")
 
     .container
       b-nav-toggle(target="nav_collapse")
 
-      b-link.navbar-brand(to="#")
+      b-link.navbar-brand(v-scroll-to="'#header'")
         span.text-uppercase.text-white.px-3.py-1(v-html="name")
 
       b-collapse#nav_collapse(is-nav="is-nav")
         b-nav.ml-auto(is-nav-bar="is-nav-bar")
-          b-nav-item(v-for="(item, index) in items",
-                     :key="index",
-                     v-scroll-to="item.section")
+          b-nav-item.mr-2(v-for="(item, index) in items",
+                          :key="index",
+                          v-scroll-to="item.section")
             span.text-white.text-uppercase(v-html="item.name")
 </template>
 
