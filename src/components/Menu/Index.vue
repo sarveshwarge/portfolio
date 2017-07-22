@@ -29,37 +29,10 @@
         type: String
       }
     },
-    data () {
-      return {
-        items: [
-          {
-            name: 'Ik',
-            section: '#introduction'
-          },
-          {
-            name: 'CV',
-            section: '#cv'
-          },
-          {
-            name: 'Certificaten',
-            section: '#certificates'
-          },
-          {
-            name: 'Vaardigheden',
-            section: '#skills'
-          },
-          {
-            name: 'Referenties',
-            section: '#references'
-          },
-          {
-            name: 'Projecten',
-            section: '#projects'
-          }
-        ]
-      }
-    },
     computed: {
+      ...mapGetters('menu', [
+        'items'
+      ]),
       ...mapGetters('basics', [
         'name'
       ])
