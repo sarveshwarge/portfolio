@@ -1,7 +1,7 @@
 <template lang="pug">
   section#introduction
-    .container-fluid
-      .container.my-5
+    .container-fluid.p-5
+      .container
         introduction-title(:title="name",
                            :subtitle="label")
         .row.my-5

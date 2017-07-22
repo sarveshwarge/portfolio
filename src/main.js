@@ -6,9 +6,13 @@ import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
 import VueResource from 'vue-resource'
+import VueScrollTo from 'vue-scrollto'
+import VueScroll from 'vue-scroll'
 
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
+Vue.use(VueScrollTo)
+Vue.use(VueScroll)
 
 Vue.config.productionTip = false
 

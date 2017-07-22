@@ -13,7 +13,7 @@
         b-nav.ml-auto(is-nav-bar="is-nav-bar")
           b-nav-item(v-for="(item, index) in items",
                      :key="index",
-                      :to="item.link")
+                     v-scroll-to="item.section")
             span.text-white.text-uppercase(v-html="item.name")
 </template>
 
@@ -26,8 +26,28 @@
       return {
         items: [
           {
-            name: 'Over mij',
-            link: '#introduction'
+            name: 'Ik',
+            section: '#introduction'
+          },
+          {
+            name: 'CV',
+            section: '#cv'
+          },
+          {
+            name: 'Certificaten',
+            section: '#certificates'
+          },
+          {
+            name: 'Vaardigheden',
+            section: '#skills'
+          },
+          {
+            name: 'Referenties',
+            section: '#references'
+          },
+          {
+            name: 'Projecten',
+            section: '#projects'
           }
         ]
       }
