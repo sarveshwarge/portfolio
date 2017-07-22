@@ -2,10 +2,16 @@
   header#header.h-100
     portfolio-menu
     .container-fluid.bg-clouds.bg-image.h-75
+      .row.h-100.align-items-center
+        .col.text-center.text-white
+          h1.text-uppercase(v-html="title")
+          h4.lh-2.fw2(v-html="subtitle")
+
     portfolio-image
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import Image from '@/components/Header/Image'
   import Menu from '@/components/Menu/Index'
 
@@ -14,6 +20,18 @@
     components: {
       portfolioImage: Image,
       portfolioMenu: Menu
+    },
+    computed: {
+      ...mapGetters('basics', [
+        'name',
+        'label'
+      ]),
+      title () {
+        return `Hallo, ik ben ${this.name.split(' ')[0]}!`
+      },
+      subtitle () {
+        return `Een ${this.label}.`
+      }
     }
   }
 </script>
