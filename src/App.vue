@@ -4,13 +4,8 @@
 </template>
 
 <script>
-  import smoothscroll from 'smoothscroll-polyfill'
-
   export default {
-    name: 'app',
-    created () {
-      smoothscroll.polyfill()
-    }
+    name: 'app'
   }
 </script>
 
