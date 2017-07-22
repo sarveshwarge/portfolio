@@ -23,11 +23,11 @@
         type: String
       },
       title: {
-        required: true,
+        required: false,
         type: String
       },
       subtitle: {
-        required: true,
+        required: false,
         type: String
       }
     },
