@@ -1,5 +1,6 @@
 <template lang="pug">
-  section(:id="id")
+  section(:id="id",
+          v-observe-visibility="setActive")
     .container-fluid.p-5
       .container
         references-title(title="Referenties",
@@ -23,6 +24,8 @@
   import Reference from '@/components/References/Reference'
   import Indicators from '@/components/References/Indicators'
 
+  import active from '@/mixins/active'
+
   export default {
     name: 'portfolio-references',
     data () {
@@ -40,6 +43,9 @@
       ...mapGetters('resume', [
         'references'
       ])
-    }
+    },
+    mixins: [
+      active
+    ]
   }
 </script>

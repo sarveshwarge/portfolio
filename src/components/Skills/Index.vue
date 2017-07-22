@@ -1,5 +1,6 @@
 <template lang="pug">
-  section(:id="id")
+  section(:id="id",
+          v-observe-visibility="setActive")
     .container-fluid.p-5
       .container.mb-3
         skills-title(title="Vaardigheden",
@@ -16,6 +17,8 @@
   import Title from '@/components/Helpers/Title'
   import Group from '@/components/Skills/Group'
 
+  import active from '@/mixins/active'
+
   export default {
     name: 'portfolio-skills',
     data () {
@@ -31,6 +34,9 @@
       ...mapGetters('resume', [
         'skills'
       ])
-    }
+    },
+    mixins: [
+      active
+    ]
   }
 </script>

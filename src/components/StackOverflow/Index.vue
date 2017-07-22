@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#stack-overflow(v-if="badges")
+  section#stack-overflow
     .container-fluid.bg-clouds.p-5
       .container
         stack-overflow-title(title="Stack Overflow",
