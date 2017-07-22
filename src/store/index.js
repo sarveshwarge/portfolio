@@ -8,6 +8,7 @@ import mutations from './mutations'
 
 import basics from './modules/basics'
 import resume from './modules/resume'
+import menu from './modules/menu'
 
 Vue.use(Vuex)
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
   mutations,
   modules: {
     basics,
-    resume
+    resume,
+    menu
   }
 })
