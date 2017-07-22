@@ -25,8 +25,7 @@
     name: 'portfolio-menu',
     props: {
       variant: {
-        required: false,
-        default: 'white',
+        required: true,
         type: String
       }
     },

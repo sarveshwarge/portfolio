@@ -19,7 +19,7 @@
     name: 'portfolio-header',
     data () {
       return {
-        variant: 'white'
+        variant: 'none'
       }
     },
     components: {
@@ -40,7 +40,7 @@
     },
     methods: {
       setVariant: function (isVisible, entry) {
-        this.variant = isVisible ? 'white' : 'midnight-blue'
+        this.variant = isVisible ? 'none' : 'midnight-blue'
       }
     }
   }
