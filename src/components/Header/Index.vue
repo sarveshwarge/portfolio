@@ -5,7 +5,7 @@
       .row.h-100.align-items-center
         .col.text-center.text-white
           h1.text-uppercase(v-html="title")
-          h4.lh-2.fw2(v-html="subtitle")
+          h4.lh-2.fw2.mb-0(v-html="subtitle")
 
     portfolio-image
 </template>
