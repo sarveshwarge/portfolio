@@ -8,11 +8,13 @@ import BootstrapVue from 'bootstrap-vue'
 import VueResource from 'vue-resource'
 import VueScrollTo from 'vue-scrollto'
 import VueScroll from 'vue-scroll'
+import VueObserveVisibility from 'vue-observe-visibility/dist/vue-observe-visibility'
 
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
 Vue.use(VueScrollTo)
 Vue.use(VueScroll)
+Vue.use(VueObserveVisibility)
 
 Vue.config.productionTip = false
 

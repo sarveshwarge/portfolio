@@ -1,7 +1,7 @@
 <template lang="pug">
   header#header.h-100
-    portfolio-menu
-    .container-fluid.bg-clouds.bg-image.h-75
+    portfolio-menu(:variant="variant")
+    .container-fluid.bg-clouds.bg-image.h-75(v-observe-visibility="setVariant")
       .row.h-100.align-items-center
         .col.text-center.text-white
           h1.text-uppercase(v-html="title")
@@ -17,6 +17,11 @@
 
   export default {
     name: 'portfolio-header',
+    data () {
+      return {
+        variant: 'white'
+      }
+    },
     components: {
       portfolioImage: Image,
       portfolioMenu: Menu
@@ -31,6 +36,11 @@
       },
       subtitle () {
         return `Een ${this.label}.`
+      }
+    },
+    methods: {
+      setVariant: function (isVisible, entry) {
+        this.variant = isVisible ? 'white' : 'midnight-blue'
       }
     }
   }

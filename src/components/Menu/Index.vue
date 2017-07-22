@@ -1,7 +1,7 @@
 <template lang="pug">
   b-navbar.py-2(fixed="top",
                 toggle-breakpoint="md",
-                variant="midnight-blue",
+                :variant="variant",
                 :toggleable="true")
 
     .container
@@ -13,8 +13,8 @@
       b-collapse#nav_collapse(is-nav="is-nav")
         b-nav.ml-auto(is-nav-bar="is-nav-bar")
           b-nav-item.mr-2(v-for="(item, index) in items",
-                          :key="index",
-                          v-scroll-to="item.section")
+                          v-scroll-to="item.section",
+                          :key="index")
             span.text-white.text-uppercase(v-html="item.name")
 </template>
 
@@ -23,6 +23,13 @@
 
   export default {
     name: 'portfolio-menu',
+    props: {
+      variant: {
+        required: false,
+        default: 'white',
+        type: String
+      }
+    },
     data () {
       return {
         items: [
