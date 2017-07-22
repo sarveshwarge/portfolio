@@ -4,18 +4,19 @@
       p
         strong.text-uppercase.midnight-blue(v-html="title")
       p(v-if="website")
-        a.concrete(:href="website", target="_blank")
+        a.concrete.d-flex.align-items-center(:href="website", 
+                                             target="_blank")
           i.fa.mr-2(:class="icon")
           span(v-html="subtitle")
-      p.concrete(v-else="")
+      p.concrete.d-flex.align-items-center(v-else="")
         i.fa.mr-2(:class="icon")
         span(v-html="subtitle")
       p.silver.summary.fw1.lh-2(v-html="summary")
       hr.mt-3.mb-5
     .col-4.text-right.small.silver
-      p
-        i.fa.fa-calendar.mr-2
-        span(v-html="date")
+      p.d-flex.align-items-center
+          i.fa.fa-calendar.mr-2.ml-auto
+          span(v-html="date")
 </template>
 
 <script>
