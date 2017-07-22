@@ -1,14 +1,13 @@
 <template lang="pug">
-  section#interests
-    .container-fluid.bg-clouds.p-5
-      .container.mb-3
-        interests-title(title="Interesses",
-                        subtitle="Zo vul ik het liefst mijn dag")
-        .row
-          interest(v-for="(interest, index) in interests",
-                   :key="index",
-                   :interest="interest",
-                   :icon="icon(interest.name)")
+  interests-section(id="interests",
+                    background-color="clouds",
+                    title="Interesses",
+                    subtitle="Zo vul ik het liefst mijn dag")
+    .row
+      interest(v-for="(interest, index) in interests",
+               :key="index",
+               :interest="interest",
+               :icon="icon(interest.name)")
 </template>
 
 <script>
@@ -16,13 +15,13 @@
   import _ from 'lodash'
   import slugify from 'slugify'
 
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Interest from '@/components/Interests/Interest'
 
   export default {
     name: 'portfolio-interests',
     components: {
-      interestsTitle: Title,
+      interestsSection: Section,
       interest: Interest
     },
     computed: {

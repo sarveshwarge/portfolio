@@ -1,20 +1,18 @@
 <template lang="pug">
-  section(:id="id",
-          v-observe-visibility="setActive")
-    .container-fluid.p-5
-      .container.mb-3
-        skills-title(title="Vaardigheden",
-                     subtitle="Lorem ipsum dolor sit amet")
-        .row
-          skills-group(v-for="(skill, index) in skills",
-                       :key="index",
-                       :skill="skill")
+  skills-section(:id="id",
+                 title="Vaardigheden",
+                 subtitle="Lorem ipsum dolor sit amet",
+                 v-observe-visibility="setActive")
+    .row
+      skills-group(v-for="(skill, index) in skills",
+                    :key="index",
+                    :skill="skill")
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Group from '@/components/Skills/Group'
 
   import active from '@/mixins/active'
@@ -27,7 +25,7 @@
       }
     },
     components: {
-      skillsTitle: Title,
+      skillsSection: Section,
       skillsGroup: Group
     },
     computed: {

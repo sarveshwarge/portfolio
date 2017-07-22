@@ -1,22 +1,21 @@
 <template lang="pug">
-  section#stack-overflow
-    .container-fluid.bg-clouds.p-5
-      .container
-        stack-overflow-title(title="Stack Overflow",
-                             subtitle="Ervaring delen is kennis vermenigvuldigen")
-        .row.justify-content-center
-          .col-8.text-center
-            stack-overflow-badge(v-for="(badge, index) in badges",
-                                 :badge="badge",
-                                 :key="index")
-        stack-overflow-description
-          p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis turpis quis nulla lobortis tincidunt. Phasellus aliquam odio elit, nec pretium velit dapibus sit amet. Curabitur nec vestibulum lectus. Donec laoreet porta nisl in lobortis. Ut nec metus velit. Sed nec elementum tortor. Quisque ac leo rutrum, congue lectus vitae, rutrum nibh. Donec faucibus elit eu iaculis blandit.
+  stack-overflow-section(id="stack-overflow",
+                         background-color="clouds",
+                         title="Stack Overflow",
+                         subtitle="Ervaring delen is kennis vermenigvuldigen")
+    .row.justify-content-center
+      .col-8.text-center
+        stack-overflow-badge(v-for="(badge, index) in badges",
+                             :badge="badge",
+                             :key="index")
+    stack-overflow-description
+      p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis turpis quis nulla lobortis tincidunt. Phasellus aliquam odio elit, nec pretium velit dapibus sit amet. Curabitur nec vestibulum lectus. Donec laoreet porta nisl in lobortis. Ut nec metus velit. Sed nec elementum tortor. Quisque ac leo rutrum, congue lectus vitae, rutrum nibh. Donec faucibus elit eu iaculis blandit.
 </template>
 
 <script>
   import axios from 'axios'
 
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Description from '@/components/Helpers/Description'
   import Badge from '@/components/StackOverflow/Badge'
 
@@ -28,7 +27,7 @@
       }
     },
     components: {
-      stackOverflowTitle: Title,
+      stackOverflowSection: Section,
       stackOverflowDescription: Description,
       stackOverflowBadge: Badge
     },

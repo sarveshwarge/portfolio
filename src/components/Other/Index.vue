@@ -1,12 +1,15 @@
 <template lang="pug">
-  .container-fluid.bg-clouds
-    .container.p-5
-      .row
-        .col
+  other-section(id="other",
+                background-color="clouds")
 </template>
 
 <script>
+  import Section from '@/components/Helpers/Section'
+
   export default {
-    name: 'portfolio-other'
+    name: 'portfolio-other',
+    components: {
+      otherSection: Section
+    }
   }
 </script>

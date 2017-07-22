@@ -1,32 +1,29 @@
 <template lang="pug">
-  section(:id="id",
-          v-observe-visibility="setActive")
-    .container.pt-5
-      cv-title(title="Curriculum Vitae",
-               subtitle="Hier heb ik mijn ervaringen opgedaan")
+  cv-section(:id="id",
+             title="Curriculum Vitae",
+             subtitle="Hier heb ik mijn ervaringen opgedaan",
+             v-observe-visibility="setActive")
 
-      cv-experiences(title="Opleidingen",
-                     :experiences="_education")
+    cv-experiences(title="Opleidingen",
+                   :experiences="_education")
 
-      cv-experiences(title="Werkervaring",
-                     :experiences="_work")
+    cv-experiences(title="Werkervaring",
+                   :experiences="_work")
 </template>
 
 <script>
   import _ from 'lodash'
   import { mapGetters } from 'vuex'
 
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Experiences from '@/components/Experiences/Index'
-  import Button from '@/components/Helpers/Button'
 
   import active from '@/mixins/active'
 
   export default {
     name: 'portfolio-cv',
     components: {
-      cvButton: Button,
-      cvTitle: Title,
+      cvSection: Section,
       cvExperiences: Experiences
     },
     data () {
