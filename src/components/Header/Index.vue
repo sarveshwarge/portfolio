@@ -32,10 +32,10 @@
         'label'
       ]),
       title () {
-        return `Hallo, ik ben ${this.name.split(' ')[0]}!`
+        return `Hallo, ik ben ${this.name.split(' ')[0]}`
       },
       subtitle () {
-        return `Een ${this.label}.`
+        return `Een ${this.label}`
       }
     },
     methods: {
