@@ -1,25 +1,23 @@
 <template lang="pug">
-  section(:id="id",
-          v-observe-visibility="setActive")
-    .container-fluid.p-5
-      .container
-        references-title(title="Referenties",
-                         subtitle="Wat vinden mensen van mij?")
-        .row
-          references-control(direction="previous")
-          references-reference(v-for="(reference, index) in references",
-                               :reference="reference",
-                               :index="index",
-                               :key="index")
-          references-control(direction="next")
-        .row.mb-4
-          references-indicators(:references="references")
+  references-section(:id="id",
+                     title="Referenties",
+                     subtitle="Wat vinden mensen van mij?",
+                     v-observe-visibility="setActive")
+    .row
+      references-control(direction="previous")
+      references-reference(v-for="(reference, index) in references",
+                            :reference="reference",
+                            :index="index",
+                            :key="index")
+      references-control(direction="next")
+    .row.mb-4
+      references-indicators(:references="references")
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Control from '@/components/References/Control'
   import Reference from '@/components/References/Reference'
   import Indicators from '@/components/References/Indicators'
@@ -34,7 +32,7 @@
       }
     },
     components: {
-      referencesTitle: Title,
+      referencesSection: Section,
       referencesControl: Control,
       referencesIndicators: Indicators,
       referencesReference: Reference

@@ -1,22 +1,19 @@
 <template lang="pug">
-  section(:id="id",
-          v-observe-visibility="setActive")
-    .container-fluid.p-5
-      .container
-        certificates-title(title="Certificaten",
-                           subtitle="Lorem ipsum dolor sit amet")
-
-        experiences(v-for="(vocational, index) in vocationals",
-                    :title="vocational.issuingAuthority",
-                    :experiences="vocational.accreditations",
-                    :key="index")
+  certificates-section(:id="id",
+                       v-observe-visibility="setActive",
+                       title="Certificaten",
+                       subtitle="Lorem ipsum dolor sit amet")
+    experiences(v-for="(vocational, index) in vocationals",
+                :title="vocational.issuingAuthority",
+                :experiences="vocational.accreditations",
+                :key="index")
 </template>
 
 <script>
   import _ from 'lodash'
   import { mapGetters } from 'vuex'
 
-  import Title from '@/components/Helpers/Title'
+  import Section from '@/components/Helpers/Section'
   import Experiences from '@/components/Experiences/Index'
 
   import active from '@/mixins/active'
@@ -29,7 +26,7 @@
       }
     },
     components: {
-      certificatesTitle: Title,
+      certificatesSection: Section,
       experiences: Experiences
     },
     computed: {
