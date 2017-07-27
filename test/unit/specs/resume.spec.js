@@ -1,5 +1,5 @@
 import ZSchema from 'z-schema'
-import resume from '../../../src/resume/maartenpaauw.json'
+import resume from '../../../src/resume/resume.json'
 import schema from 'resume-schema/schema.json'
 
 describe('JSON Resume', () => {
