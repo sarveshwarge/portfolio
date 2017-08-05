@@ -5,8 +5,16 @@
       "website": "https://www.udemy.com/",
       "accreditations":[
         {
+          "title": "The Complete Node.js Developer Course",
+          "website": "https://www.udemy.com/the-complete-nodejs-developer-course-2/",
+          "verification": "/static/vocational/udemy/UC-FHAK48RX.pdf",
+          "achievedDate": "2017-08-05",
+          "expireDate": "",
+          "doesNotExpire": "true"
+        },
+        {
           "title": "Vue JS 2 - The Complete Guide",
-          "website": "https://www.udemy.com/vuejs-2-the-complete-guide",
+          "website": "https://www.udemy.com/vuejs-2-the-complete-guide/",
           "verification": "/static/vocational/udemy/UC-ZABTRLUO.pdf",
           "achievedDate": "2017-06-07",
           "expireDate": "",
