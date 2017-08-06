@@ -39,16 +39,16 @@
       }
     },
     methods: {
-      fetchData () {
-        this.$http.get('https://crossorigin.me/http://api.whatpulse.org/pulses.php?user=maartenpaauw&format=json')
-          .then((response) => {
-            this.count = 0
-            _.forEach(response.data, (pulse) => {
-              if (moment(pulse.Timedate).isSame(new Date(), 'd')) {
-                this.count += parseInt(pulse[_.upperFirst(this.type)])
-              }
-            })
+      async fetchData () {
+        try {
+          const response = await this.$http.get('https://crossorigin.me/http://api.whatpulse.org/pulses.php?user=maartenpaauw&format=json')
+          this.count = 0
+          _.forEach(response.data, (pulse) => {
+            if (moment(pulse.Timedate).isSame(new Date(), 'd')) {
+              this.count += parseInt(pulse[_.upperFirst(this.type)])
+            }
           })
+        } catch (err) {}
       },
       createInterval () {
         this.interval = setInterval(() => {
@@ -59,6 +59,9 @@
     created () {
       this.fetchData()
       this.createInterval()
+    },
+    beforeDestroy () {
+      this.interval = null
     }
   }
 </script>
