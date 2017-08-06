@@ -31,14 +31,13 @@
       stackOverflowDescription: Description,
       stackOverflowBadge: Badge
     },
-    created () {
-      axios.get('https://api.stackexchange.com/2.2/users/2940668/badges?site=stackoverflow&order=desc&sort=rank&filter=default')
-        .then((response) => {
-          this.badges = response.data.items
-        })
-        .catch(() => {
-          this.badges = null
-        })
+    async created () {
+      try {
+        const response = await axios.get('https://api.stackexchange.com/2.2/users/2940668/badges?site=stackoverflow&order=desc&sort=rank&filter=default')
+        this.badges = response.data.items
+      } catch (err) {
+        this.badges = null
+      }
     }
   }
 </script>
