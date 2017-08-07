@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "3.1.0",
-    "@commitlint/config-angular": "3.1.0",
+    "@commitlint/config-angular": "3.1.1",
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
