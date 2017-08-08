@@ -147,7 +147,10 @@
   },
   "greenkeeper": {
     "branchPrefix": "dependency-update-",
-    "label": "dependency-update"
+    "label": "dependency-update",
+    "ignore": [
+      "typeface-montserrat"  
+    ]
   },
   "engines": {
     "node": ">= 4.0.0",
