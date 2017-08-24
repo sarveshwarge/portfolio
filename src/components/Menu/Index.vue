@@ -1,11 +1,11 @@
 <template lang="pug">
   b-navbar.p-0(fixed="top",
-               toggle-breakpoint="md",
+               toggle-breakpoint="lg",
                :variant="variant",
                :toggleable="true")
 
     .container
-      b-nav-toggle(target="nav_collapse")
+      b-nav-toggle.ml-3(target="nav_collapse")
 
       b-link.navbar-brand.my-3(v-scroll-to="'#header'")
         span.text-uppercase.text-white.px-3.py-1(v-html="name")
@@ -67,5 +67,4 @@
       border-bottom: solid 0.25rem white;
     }
   }
-  
 </style>
