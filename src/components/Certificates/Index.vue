@@ -7,6 +7,7 @@
                 :title="vocational.issuingAuthority",
                 :experiences="vocational.accreditations",
                 :key="index")
+    cv-download
 </template>
 
 <script>
@@ -14,6 +15,7 @@
 
   import Section from '@/components/Helpers/Section'
   import Experiences from '@/components/Experiences/Index'
+  import Download from '@/components/Helpers/Download'
 
   import active from '@/mixins/active'
 
@@ -26,7 +28,8 @@
     },
     components: {
       certificatesSection: Section,
-      experiences: Experiences
+      experiences: Experiences,
+      cvDownload: Download
     },
     computed: {
       ...mapGetters('resume', [
