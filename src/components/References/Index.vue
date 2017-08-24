@@ -5,10 +5,13 @@
                      v-observe-visibility="setActive")
     .row
       references-control(direction="previous")
-      references-reference(v-for="(reference, index) in references",
-                            :reference="reference",
-                            :index="index",
-                            :key="index")
+      .col-8
+        .row
+          transition(:duration="400",
+                     enter-active-class="animated slideInDown",
+                     leave-active-class="animated fadeOut",
+                     mode="out-in")
+            reference(:reference="reference", :key="reference.name")
       references-control(direction="next")
     .row.mb-4
       references-indicators(:references="references")
@@ -35,10 +38,11 @@
       referencesSection: Section,
       referencesControl: Control,
       referencesIndicators: Indicators,
-      referencesReference: Reference
+      reference: Reference
     },
     computed: {
       ...mapGetters('resume', [
+        'reference',
         'references'
       ])
     },
