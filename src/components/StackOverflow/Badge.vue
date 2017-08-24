@@ -1,8 +1,9 @@
 <template lang="pug">
-  b-badge.bg-asbestos.mt-2.mr-2.px-2.pointer(variant="default",
-                                             @click="open")
-    i.fa.fa-circle.mr-2(:class="rank")
-    span.fw4.text-white(v-html="label")
+  a(:href="link",
+    target="_blank")
+    b-badge.bg-asbestos.mt-2.mr-2.px-2.pointer(variant="default")
+      i.fa.fa-circle.mr-2(:class="rank")
+      span.fw4.text-white(v-html="label")
 </template>
 
 <script>
@@ -29,17 +30,14 @@
       label () {
         return this.count > 1 ? `${this.name} &times; ${this.count}` : this.name
       }
-    },
-    methods: {
-      open () {
-        window.open(this.link, '_blank')
-      }
     }
   }
 </script>
 
 <style lang="scss" scoped="scoped">
-  .pointer { cursor: pointer; }
+  .pointer {
+    cursor: pointer;
+  }
 
   .badge-bronze {
     color: rgb(204, 160, 125);
