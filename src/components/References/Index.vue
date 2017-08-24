@@ -7,8 +7,8 @@
       references-control(direction="previous")
       .col-8
         .row
-          transition(:duration="400",
-                     enter-active-class="animated slideInDown",
+          transition(:duration="500",
+                     enter-active-class="animated fadeIn",
                      leave-active-class="animated fadeOut",
                      mode="out-in")
             reference(:reference="reference", :key="reference.name")
