@@ -1,6 +1,7 @@
 <template lang="pug">
   a(:href="link",
-    target="_blank")
+    target="_blank",
+    rel="noopener")
     b-badge.bg-asbestos.mt-2.mr-2.px-2.pointer(variant="default")
       i.fa.fa-circle.mr-2(:class="rank")
       span.fw4.text-white(v-html="label")

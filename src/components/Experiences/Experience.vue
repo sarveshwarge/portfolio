@@ -5,7 +5,8 @@
         strong.text-uppercase.midnight-blue(v-html="title")
       p(v-if="website")
         a.concrete.d-flex.align-items-center(:href="website", 
-                                             target="_blank")
+                                             target="_blank",
+                                             rel="noopener")
           i.fa.mr-2(:class="icon")
           span(v-html="subtitle")
       p.concrete.d-flex.align-items-center(v-else="")
