@@ -21,6 +21,8 @@
 </template>
 
 <script>
+  import moment from 'moment'
+
   export default {
     name: 'experience',
     props: {
@@ -49,18 +51,14 @@
         return this.experience.doesNotExpire ? this.start : `${this.start} — ${this.end}`
       },
       start () {
-        return new Intl.DateTimeFormat(['nl-NL'], {
-          month: 'long',
-          year: 'numeric'
-        }).format(new Date(this.experience.start))
+        return moment(this.experience.start).format('MMMM YYYY')
       },
       end () {
-        return typeof this.experience.end === 'undefined' ? 'Huidig'
-          : new Intl.DateTimeFormat(['nl-NL'], {
-            month: 'long',
-            year: 'numeric'
-          }).format(new Date(this.experience.end))
+        return typeof this.experience.end === 'undefined' ? 'Huidig' : moment(this.experience.end).format('MMMM YYYY')
       }
+    },
+    created () {
+      moment.locale('nl')
     }
   }
 </script>
