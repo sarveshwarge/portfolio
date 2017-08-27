@@ -7,7 +7,6 @@
 </template>
 
 <script>
-  import moment from 'moment'
   import _ from 'lodash'
   import VueCountUp from 'vue-countup-v2'
 
@@ -41,8 +40,8 @@
       async fetchData () {
         try {
           const username = 'maartenpaauw'
-          const start = moment().startOf('day').unix()
-          const end = moment().unix()
+          const start = this.$moment().startOf('day').unix()
+          const end = this.$moment().unix()
           const response = await this.$http.get(`http://api.whatpulse.org/pulses.php?user=${username}&start=${start}&end=${end}&format=json`)
           this.count = 0
           Object.values(response.data).forEach((pulse) => {

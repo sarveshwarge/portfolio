@@ -12,7 +12,6 @@
 </template>
 
 <script>
-  import moment from 'moment'
   import _ from 'lodash'
   import { mapGetters } from 'vuex'
 
@@ -36,27 +35,24 @@
         'email'
       ]),
       from () {
-        return moment(this.internship.from).format('D MMMM')
+        return this.$moment(this.internship.from).format('D MMMM')
       },
       to () {
-        return moment(this.internship.to).format('D MMMM YYYY')
+        return this.$moment(this.internship.to).format('D MMMM YYYY')
       },
       mailto () {
         return `mailto:${this.email}?subject=${_.upperFirst(this.internship.type)}`
       },
       show () {
-        const inThird = moment().isBetween(moment('2017-07-17'), moment('2018-07-16'))
-        const inFourth = moment().isBetween(moment('2018-07-16'), moment('2019-07-15'))
+        const inThird = this.$moment().isBetween(this.$moment('2017-07-17'), this.$moment('2018-07-16'))
+        const inFourth = this.$moment().isBetween(this.$moment('2018-07-16'), this.$moment('2019-07-15'))
         return this.visible(inThird, 'stage') || this.visible(inFourth, 'afstudeerstage')
       }
     },
     methods: {
       visible (inPeriod, type) {
-        return inPeriod && moment().isBefore(this.internship.from) && this.internship.type === type
+        return inPeriod && this.$moment().isBefore(this.internship.from) && this.internship.type === type
       }
-    },
-    created () {
-      moment.locale('nl')
     }
   }
 </script>
