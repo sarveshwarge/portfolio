@@ -5,7 +5,8 @@
         strong.text-uppercase.midnight-blue(v-html="title")
       p(v-if="website")
         a.concrete.d-flex.align-items-center(:href="website", 
-                                             target="_blank")
+                                             target="_blank",
+                                             rel="noopener")
           i.fa.mr-2(:class="icon")
           span(v-html="subtitle")
       p.concrete.d-flex.align-items-center(v-else="")
@@ -48,17 +49,10 @@
         return this.experience.doesNotExpire ? this.start : `${this.start} — ${this.end}`
       },
       start () {
-        return new Intl.DateTimeFormat(['nl-NL'], {
-          month: 'long',
-          year: 'numeric'
-        }).format(new Date(this.experience.start))
+        return this.$moment(this.experience.start).format('MMMM YYYY')
       },
       end () {
-        return typeof this.experience.end === 'undefined' ? 'Huidig'
-          : new Intl.DateTimeFormat(['nl-NL'], {
-            month: 'long',
-            year: 'numeric'
-          }).format(new Date(this.experience.end))
+        return typeof this.experience.end === 'undefined' ? 'Huidig' : this.$moment(this.experience.end).format('MMMM YYYY')
       }
     }
   }

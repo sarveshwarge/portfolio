@@ -9,6 +9,7 @@
 
     cv-experiences(title="Werkervaring",
                    :experiences="_work")
+    cv-download
 </template>
 
 <script>
@@ -17,6 +18,7 @@
 
   import Section from '@/components/Helpers/Section'
   import Experiences from '@/components/Experiences/Index'
+  import Download from '@/components/Helpers/Download'
 
   import active from '@/mixins/active'
 
@@ -24,7 +26,8 @@
     name: 'portfolio-cv',
     components: {
       cvSection: Section,
-      cvExperiences: Experiences
+      cvExperiences: Experiences,
+      cvDownload: Download
     },
     data () {
       return {

@@ -1,9 +1,10 @@
 <template lang="pug">
   internship-section(id="internship",
-                     background-color="midnight-blue")
+                     background-color="midnight-blue",
+                     v-show="show")
     .row
       .col.text-center
-        h1.h2.text-white.fw5 Momenteel ben ik op zoek naar een stageplaats.
+        h1.h2.text-white Momenteel ben ik op zoek naar een {{ internship.type }}.
         p.mt-3.mb-5.silver.fw2 Van {{ from }} tot en met {{ to }}.
         internship-button(:href="mailto")
           i.fa.fa-check.mr-2
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   import { mapGetters } from 'vuex'
 
   import Section from '@/components/Helpers/Section'
@@ -19,7 +21,7 @@
   export default {
     name: 'portfolio-internship',
     props: {
-      period: {
+      internship: {
         required: true,
         type: Object
       }
@@ -33,19 +35,23 @@
         'email'
       ]),
       from () {
-        return new Intl.DateTimeFormat(['nl-NL'], {
-          day: 'numeric',
-          month: 'long'
-        }).format(new Date(this.period.from))
+        return this.$moment(this.internship.from).format('D MMMM')
       },
       to () {
-        return new Intl.DateTimeFormat(['nl-NL'], {
-          day: 'numeric',
-          month: 'long'
-        }).format(new Date(this.period.to))
+        return this.$moment(this.internship.to).format('D MMMM YYYY')
       },
       mailto () {
-        return `mailto:${this.email}?subject=Stageplaats`
+        return `mailto:${this.email}?subject=${_.upperFirst(this.internship.type)}`
+      },
+      show () {
+        const inThird = this.$moment().isBetween(this.$moment('2017-07-17'), this.$moment('2018-07-16'))
+        const inFourth = this.$moment().isBetween(this.$moment('2018-07-16'), this.$moment('2019-07-15'))
+        return this.visible(inThird, 'stage') || this.visible(inFourth, 'afstudeerstage')
+      }
+    },
+    methods: {
+      visible (inPeriod, type) {
+        return inPeriod && this.$moment().isBefore(this.internship.from) && this.internship.type === type
       }
     }
   }
