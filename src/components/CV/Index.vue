@@ -61,9 +61,17 @@
             start: education.startDate,
             end: education.endDate,
             icon: 'fa-graduation-cap',
-            url: `./static/cv/education/${slugify(education.institution + ' ' + education.area).toLowerCase()}.pdf`
+            url: this.inFuture(education.endDate) ? null : this.file(education)
           }
         })
+      }
+    },
+    methods: {
+      inFuture (end) {
+        return new Date(end) >= new Date()
+      },
+      file (education) {
+        return `./static/cv/education/${slugify(education.institution + ' ' + education.area + ' ' + education.studyType).toLowerCase()}.pdf`
       }
     },
     mixins: [

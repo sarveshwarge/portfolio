@@ -160,6 +160,24 @@
       "courses": []
     },
     {
+      "institution": "Hogeschool Rotterdam",
+      "area": "Urban Interaction Design (UrbanlxD) HP",
+      "studyType": "Minor",
+      "startDate": "2017-08-21",
+      "endDate": "2018-02-02",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Hogeschool Leiden",
+      "area": "Propedeuse",
+      "studyType": "Bachelor",
+      "startDate": "2015-09-01",
+      "endDate": "2016-06-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
       "institution": "Grafisch Lyceum Rotterdam",
       "area": "Media Developer",
       "studyType": "MBO 4",
@@ -178,8 +196,8 @@
       "courses": []
     },
     {
-      "institution": "Da Vinci College - Kagerstraat",
-      "area": "Natuur & Techniek",
+      "institution": "Da Vinci College",
+      "area": "Middelbaar Algemeen Voortgezet Onderwijs",
       "studyType": "VMBO TL",
       "startDate": "2005-09-01",
       "endDate": "2009-07-01",
