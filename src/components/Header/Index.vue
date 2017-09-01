@@ -19,7 +19,7 @@
     name: 'portfolio-header',
     data () {
       return {
-        variant: null,
+        variant: 'transparent-white',
         id: 'header'
       }
     },
