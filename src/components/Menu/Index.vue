@@ -67,4 +67,8 @@
       border-bottom: solid 0.25rem white;
     }
   }
+
+  .bg-transparent-white {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 </style>
