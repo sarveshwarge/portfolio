@@ -26,11 +26,9 @@
     computed: {
       ...mapGetters('basics', [
         'name',
-        'email'
+        'email',
+        'mailto'
       ]),
-      mailto () {
-        return `mailto:${this.email}`
-      },
       year () {
         const year = new Date().getFullYear()
         return this.started === year ? year : `${this.started} &mdash; ${year}`

@@ -9,7 +9,7 @@
                                  :value="label")
 
         introduction-information(label="E-mailadres")
-          a.silver.hover-midnight-blue.lh-2(:href="`mailto:${email}`",
+          a.silver.hover-midnight-blue.lh-2(:href="mailto",
                                             v-html="email")
 
         introduction-information(label="Mobiel")
@@ -59,6 +59,7 @@
         'label',
         'summary',
         'email',
+        'mailto',
         'phone',
         'location'
       ]),
