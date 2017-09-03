@@ -13,7 +13,7 @@
                         v-html="email")
 
         introduction-information(label="Mobiel")
-          a.silver.lh-2(:href="`tel:${phone}`",
+          a.silver.lh-2(:href="`tel:${tel}`",
                         v-html="phone")
 
         introduction-information(label="talen")
@@ -61,7 +61,10 @@
         'email',
         'phone',
         'location'
-      ])
+      ]),
+      tel () {
+        return this.phone.replace(/\D+/g, '')
+      }
     },
     mixins: [
       active
