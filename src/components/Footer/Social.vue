@@ -1,12 +1,15 @@
 <template lang="pug">
   .row
     .col.text-center
-      a.mr-2.concrete.hover-clouds(v-for="(profile, index) in profiles",
-                                   :key="index",
-                                   :href="profile.url",
-                                   target="_blank",
-                                   rel="noopener")
-        i.fa.fa-lg(:class="icon(profile.network)")
+      span(v-for="(profile, index) in profiles",
+           :key="index")
+        b-tooltip(:target="profile.network.toLowerCase()",
+                  :title="profile.network")
+        a.mr-2.concrete.hover-clouds(:href="profile.url",
+                                     target="_blank",
+                                     rel="noopener",
+                                     :id="profile.network.toLowerCase()")
+          i.fa.fa-lg(:class="icon(profile.network)")
 </template>
 
 <script>
