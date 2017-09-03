@@ -5,6 +5,7 @@
                target="_blank",
                rel="noopener",
                variant="light")
+        i.mr-2.fa.fa-download
         span.fw1 download mijn cv
 </template>
 
