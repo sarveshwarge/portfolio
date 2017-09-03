@@ -53,22 +53,26 @@
   }
 </script>
 
-<style lang="scss">
-  .navbar-brand {
-    font-size: 1rem;
-    border: solid white 2px;
-  }
-  
-  .nav-link {
-    padding-top: 1.5rem;
-    padding-bottom: 1.25rem;
+<style lang="scss" scoped="scoped">
+  nav {
+    transition: background-color 0.8s;
 
-    &.active {
-      border-bottom: solid 0.25rem white;
+    &.bg-transparent-white {
+      background-color: rgba(255, 255, 255, 0.1);
     }
-  }
 
-  .bg-transparent-white {
-    background-color: rgba(255, 255, 255, 0.1);
+    .navbar-brand {
+      font-size: 1rem;
+      border: solid white 2px;
+    }
+
+    .nav-link {
+      padding-top: 1.5rem;
+      padding-bottom: 1.25rem;
+
+      &.active {
+        border-bottom: solid 0.25rem white;
+      }
+    }
   }
 </style>
