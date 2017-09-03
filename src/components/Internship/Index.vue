@@ -6,7 +6,8 @@
       .col.text-center
         h1.h2.text-white Momenteel ben ik op zoek naar een {{ internship.type }}.
         p.mt-3.mb-5.silver.fw2 Van {{ from }} tot en met {{ to }}.
-        internship-button(:href="mailto")
+        internship-button(:href="mailto",
+                          variant="dark")
           i.fa.fa-check.mr-2
           span.fw1 Mail mij
 </template>

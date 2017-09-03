@@ -3,7 +3,8 @@
     .col.mb-5
       download(:href="cv",
                target="_blank",
-               rel="noopener")
+               rel="noopener",
+               variant="light")
         span.fw1 download mijn cv
 </template>
 

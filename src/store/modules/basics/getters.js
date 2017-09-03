@@ -11,6 +11,9 @@ export default {
   email: state => {
     return state.email
   },
+  mailto: state => {
+    return `mailto:${state.email}`
+  },
   phone: state => {
     return state.phone
   },

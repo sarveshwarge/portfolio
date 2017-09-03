@@ -9,12 +9,12 @@
                                  :value="label")
 
         introduction-information(label="E-mailadres")
-          a.silver.lh-2(:href="`mailto:${email}`",
-                        v-html="email")
+          a.silver.hover-midnight-blue.lh-2(:href="mailto",
+                                            v-html="email")
 
         introduction-information(label="Mobiel")
-          a.silver.lh-2(:href="`tel:${phone}`",
-                        v-html="phone")
+          a.silver.hover-midnight-blue.lh-2(:href="`tel:${tel}`",
+                                            v-html="phone")
 
         introduction-information(label="talen")
           introduction-languages
@@ -59,9 +59,13 @@
         'label',
         'summary',
         'email',
+        'mailto',
         'phone',
         'location'
-      ])
+      ]),
+      tel () {
+        return this.phone.replace(/\D+/g, '')
+      }
     },
     mixins: [
       active

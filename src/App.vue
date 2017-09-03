@@ -13,6 +13,7 @@
   // Helpers
   @import "../node_modules/css-font-weight/css/font-weight.min.css";
   @import "../node_modules/css-line-height/css/line-height.min.css";
+  @import "../node_modules/css-cursors/css/css-cursors.min.css";
   @import "../node_modules/flat-ui-colors-helper/src/flat-ui-colors";
 
   // NPM
@@ -24,5 +25,10 @@
 
   * {
     font-family: 'Montserrat', sans-serif;
+
+    &::selection {
+      background: #f1c40f;
+      color: #000;
+    }
   }
 </style>

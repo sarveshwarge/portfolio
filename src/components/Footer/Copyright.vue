@@ -6,10 +6,10 @@
           .col
             p.m-2.small.midnight-blue
               i.fa.fa-heart-o.mr-2
-              a.midnight-blue.mr-2.b(v-html="name",
-                                     :href="mailto",
-                                     target="_blank",
-                                     rel="noopener")
+              a.midnight-blue.mr-2.b.hover-white(v-html="name",
+                                                 :href="mailto",
+                                                 target="_blank",
+                                                 rel="noopener")
               span(v-html="year")
 </template>
 
@@ -20,20 +20,18 @@
     name: 'footer-copyright',
     data () {
       return {
-        started: new Date('2017')
+        started: new Date('2017').getFullYear()
       }
     },
     computed: {
       ...mapGetters('basics', [
         'name',
-        'email'
+        'email',
+        'mailto'
       ]),
-      mailto () {
-        return `mailto:${this.email}`
-      },
       year () {
         const year = new Date().getFullYear()
-        return this.started.getFullYear() === year ? year : `${this.started.getFullYear()} &mdash; ${year}`
+        return this.started === year ? year : `${this.started} &mdash; ${year}`
       }
     }
   }
