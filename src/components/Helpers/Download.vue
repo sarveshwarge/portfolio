@@ -1,12 +1,11 @@
 <template lang="pug">
   .row
     .col.mb-5
-      download(:href="cv",
-               target="_blank",
-               rel="noopener",
-               variant="light")
-        i.mr-2.fa.fa-download
-        span.fw1 download mijn cv
+      download.btn-sm(:href="cv",
+                      target="_blank",
+                      rel="noopener",
+                      variant="light")
+        span.fw2 download mijn cv
 </template>
 
 <script>
