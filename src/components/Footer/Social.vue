@@ -1,11 +1,11 @@
 <template lang="pug">
   .row
     .col.text-center
-      a.mr-2.concrete(v-for="(profile, index) in profiles",
-                      :key="index",
-                      :href="profile.url",
-                      target="_blank",
-                      rel="noopener")
+      a.mr-2.concrete.hover-clouds(v-for="(profile, index) in profiles",
+                                   :key="index",
+                                   :href="profile.url",
+                                   target="_blank",
+                                   rel="noopener")
         i.fa.fa-lg(:class="icon(profile.network)")
 </template>
 
