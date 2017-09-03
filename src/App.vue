@@ -25,5 +25,10 @@
 
   * {
     font-family: 'Montserrat', sans-serif;
+
+    &::selection {
+      background: #f1c40f;
+      color: #000;
+    }
   }
 </style>
