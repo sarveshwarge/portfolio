@@ -2,7 +2,7 @@
   span
     span(v-for="(language, index) in languages",
          :key="index")
-      b-tooltip(:target-id="language.language.toLowerCase()",
+      b-tooltip(:target="language.language.toLowerCase()",
                 :title="language.language")
       span.mr-1.mt-1.flag-icon(:class="flag(language.language)",
                                :id="language.language.toLowerCase()")
