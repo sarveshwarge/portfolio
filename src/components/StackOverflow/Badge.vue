@@ -2,7 +2,7 @@
   a(:href="link",
     target="_blank",
     rel="noopener")
-    b-badge.bg-asbestos.mt-2.mr-2.px-2.pointer(variant="default")
+    b-badge.bg-asbestos.bg-hover-concrete.mt-2.mr-2.px-2.cursor-pointer(variant="default")
       i.fa.fa-circle.mr-2(:class="rank")
       span.fw4.text-white(v-html="label")
 </template>
@@ -36,10 +36,6 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  .pointer {
-    cursor: pointer;
-  }
-
   .badge-bronze {
     color: rgb(204, 160, 125);
   }

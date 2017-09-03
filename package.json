@@ -35,6 +35,7 @@
     "axios": "0.16.2",
     "bootstrap": "4.0.0-beta",
     "bootstrap-vue": "1.0.0-beta.6",
+    "css-cursors": "1.0.7",
     "css-font-weight": "1.0.7",
     "css-line-height": "1.0.7",
     "flag-icon-css": "2.8.0",
