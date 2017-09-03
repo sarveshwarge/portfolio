@@ -22,7 +22,7 @@
       return {
         variants: {
           dark: 'btn-outline-secondary bg-transparent border-asbestos asbestos hover-white border-hover-white',
-          light: 'btn-secondary bg-midnight-blue border-midnight-blue white hover-midnight-blue bg-hover-transparent'
+          light: 'btn-secondary bg-transperant border-midnight-blue midnight-blue hover-white bg-hover-midnight-blue'
         }
       }
     },
