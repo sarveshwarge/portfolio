@@ -13,8 +13,8 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   import slugify from 'slugify'
-  import camelcase from 'camelcase'
   import { mapGetters } from 'vuex'
 
   export default {
@@ -26,7 +26,7 @@
     },
     methods: {
       id (network) {
-        return camelcase(network)
+        return _.camelCase(network)
       },
       icon (network) {
         return `fa-${slugify(network).toLowerCase()}`
