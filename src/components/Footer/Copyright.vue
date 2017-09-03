@@ -20,7 +20,7 @@
     name: 'footer-copyright',
     data () {
       return {
-        started: new Date('2017')
+        started: new Date('2017').getFullYear()
       }
     },
     computed: {
@@ -33,7 +33,7 @@
       },
       year () {
         const year = new Date().getFullYear()
-        return this.started.getFullYear() === year ? year : `${this.started.getFullYear()} &mdash; ${year}`
+        return this.started === year ? year : `${this.started} &mdash; ${year}`
       }
     }
   }
