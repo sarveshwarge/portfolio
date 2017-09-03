@@ -23,6 +23,9 @@
   @import "../node_modules/font-awesome/css/font-awesome.min.css";
   @import "../node_modules/animate.css/animate.min.css";
 
+  // Custom
+  @import "./scss/main";
+
   * {
     font-family: 'Montserrat', sans-serif;
 
