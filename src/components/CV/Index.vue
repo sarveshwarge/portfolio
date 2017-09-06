@@ -71,7 +71,7 @@
         return new Date(end) >= new Date()
       },
       file (education) {
-        return `./static/cv/education/${slugify(education.institution + ' ' + education.area + ' ' + education.studyType).toLowerCase()}.pdf`
+        return `./static/education/${slugify(education.institution + ' ' + education.area + ' ' + education.studyType).toLowerCase()}.pdf`
       }
     },
     mixins: [
