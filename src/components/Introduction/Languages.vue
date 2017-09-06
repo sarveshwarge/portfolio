@@ -30,5 +30,5 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  @import "../../../node_modules/flag-icon-css/css/flag-icon.min.css";
+  @import "~flag-icon-css/css/flag-icon.min.css";
 </style>
