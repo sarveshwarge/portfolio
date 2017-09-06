@@ -1,13 +1,12 @@
 <template lang="pug">
-  .col-4
+  .col-12
     .row
       .col-12
         strong.text-uppercase.midnight-blue(v-html="skill.name")
-    .row
-      .col-12.mt-2
-        keyword(v-for="(keyword, index) in keywords",
-                :keyword="keyword",
-                :key="index")
+    .row.my-4
+      keyword(v-for="(keyword, index) in keywords",
+              :keyword="keyword",
+              :key="index")
 </template>
 
 <script>
