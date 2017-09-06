@@ -9,12 +9,12 @@
                                  :value="label")
 
         introduction-information(label="E-mailadres")
-          a.silver.hover-midnight-blue.lh-2(:href="mailto",
-                                            v-html="email")
+          a.silver.hover-midnight-blue.lh-2.hover-text-decoration-none.transition-400(:href="mailto",
+                                                                                      v-html="email")
 
         introduction-information(label="Mobiel")
-          a.silver.hover-midnight-blue.lh-2(:href="`tel:${tel}`",
-                                            v-html="phone")
+          a.silver.hover-midnight-blue.lh-2.hover-text-decoration-none.transition-400(:href="`tel:${tel}`",
+                                                                                      v-html="phone")
 
         introduction-information(label="talen")
           introduction-languages

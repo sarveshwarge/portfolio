@@ -1,7 +1,7 @@
 <template lang="pug">
   .col.text-center
     i.fa.fa-2x.mb-3.midnight-blue(:class="classes",
-                                  @mouseover="animate(true)",
+                                  @mouseover="animate()",
                                   @mouseleave="animate(false)")
     p.concrete.text-uppercase.small(v-html="name")
 </template>
@@ -30,7 +30,7 @@
       }
     },
     methods: {
-      animate (hovered) {
+      animate (hovered = true) {
         this.classes = hovered ? `${this.icon} animated tada` : this.icon
       }
     }

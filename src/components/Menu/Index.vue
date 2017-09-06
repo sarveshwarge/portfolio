@@ -1,8 +1,8 @@
 <template lang="pug">
-  b-navbar.p-0(fixed="top",
-               toggle-breakpoint="lg",
-               :variant="variant",
-               :toggleable="true")
+  b-navbar.p-0.transition-800(fixed="top",
+                              toggle-breakpoint="lg",
+                              :variant="variant",
+                              :toggleable="true")
 
     .container
       b-nav-toggle.ml-3(target="nav_collapse")
@@ -55,8 +55,6 @@
 
 <style lang="scss" scoped="scoped">
   nav {
-    transition: background-color 0.8s;
-
     &.bg-transparent-white {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -68,9 +66,10 @@
 
     .nav-link {
       padding-top: 1.5rem;
-      padding-bottom: 1.25rem;
+      padding-bottom: 1.5rem;
 
       &.active {
+        padding-bottom: 1.25rem;
         border-bottom: solid 0.25rem white;
       }
     }

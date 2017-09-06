@@ -11,17 +11,17 @@
 
 <style lang="scss">
   // Helpers
-  @import "../node_modules/css-font-weight/css/font-weight.min.css";
-  @import "../node_modules/css-line-height/css/line-height.min.css";
-  @import "../node_modules/css-cursors/css/css-cursors.min.css";
-  @import "../node_modules/flat-ui-colors-helper/src/flat-ui-colors";
+  @import "~css-font-weight/css/font-weight.min.css";
+  @import "~css-line-height/css/line-height.min.css";
+  @import "~css-cursors/css/css-cursors.min.css";
+  @import "~flat-ui-colors-helper/src/flat-ui-colors";
 
   // NPM
-  @import "../node_modules/typeface-montserrat/index.css";
-  @import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css";
-  @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-  @import "../node_modules/font-awesome/css/font-awesome.min.css";
-  @import "../node_modules/animate.css/animate.min.css";
+  @import "~typeface-montserrat/index.css";
+  @import "~bootstrap-vue/dist/bootstrap-vue.css";
+  @import "~bootstrap/dist/css/bootstrap.min.css";
+  @import "~font-awesome/css/font-awesome.min.css";
+  @import "~animate.css/animate.min.css";
 
   // Custom
   @import "./scss/main";
