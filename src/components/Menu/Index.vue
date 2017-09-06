@@ -68,9 +68,10 @@
 
     .nav-link {
       padding-top: 1.5rem;
-      padding-bottom: 1.25rem;
+      padding-bottom: 1.5rem;
 
       &.active {
+        padding-bottom: 1.25rem;
         border-bottom: solid 0.25rem white;
       }
     }
