@@ -1,8 +1,8 @@
 <template lang="pug">
-  b-navbar.p-0.transition-background-color-800(fixed="top",
-                                               toggle-breakpoint="lg",
-                                               :variant="variant",
-                                               :toggleable="true")
+  b-navbar.p-0.transition-800(fixed="top",
+                              toggle-breakpoint="lg",
+                              :variant="variant",
+                              :toggleable="true")
 
     .container
       b-nav-toggle.ml-3(target="nav_collapse")

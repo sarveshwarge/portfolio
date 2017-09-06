@@ -4,9 +4,9 @@
       p
         strong.text-uppercase.midnight-blue(v-html="title")
       p(v-if="website")
-        a.concrete.d-flex.align-items-center.hover-asbestos.hover-text-decoration-none(:href="website", 
-                                                                                       target="_blank",
-                                                                                       rel="noopener")
+        a.concrete.d-flex.align-items-center.hover-asbestos.hover-text-decoration-none.transition-400(:href="website", 
+                                                                                                      target="_blank",
+                                                                                                      rel="noopener")
           i.fa.mr-2(:class="icon")
           span(v-html="subtitle")
       p.concrete.d-flex.align-items-center(v-else="")
