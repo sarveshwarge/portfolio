@@ -10,9 +10,9 @@
                          :internship="iternship",
                          :key="iternship.type")
     portfolio-skills
-    portfolio-interests
-    portfolio-references
     portfolio-other
+    portfolio-references
+    portfolio-interests
     portfolio-projects
     portfolio-footer
 </template>
