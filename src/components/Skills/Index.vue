@@ -14,7 +14,6 @@
   
   import Section from '@/components/Helpers/Section'
   import Group from '@/components/Skills/Group'
-
   import active from '@/mixins/active'
 
   export default {
