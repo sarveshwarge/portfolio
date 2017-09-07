@@ -3,7 +3,7 @@
     i.fa.fa-2x.mb-3.transition-400(:class="[icon, { [hover]: hovered }]",
                                    @mouseover="toggle()",
                                    @mouseleave="toggle()")
-    p.concrete.text-uppercase.small(v-html="title")
+    p.concrete.mb-0.text-uppercase.small(v-html="title")
 </template>
 
 <script>
