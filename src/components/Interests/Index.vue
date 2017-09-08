@@ -3,7 +3,7 @@
                     background-color="clouds",
                     title="Interesses",
                     subtitle="Zo vul ik het liefst mijn dag")
-    .row.mb-3
+    .row
       interest(v-for="(interest, index) in interests",
                :key="index",
                :interest="interest",

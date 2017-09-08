@@ -209,18 +209,42 @@
   "publications": [],
   "skills": [
     {
-      "name": "Full Stack Development",
+      "name": "Development",
       "level": "Master",
       "keywords": [
+        "Apache",
+        "Bower",
+        "GitHub",
+        "Grunt",
+        "Gulp",
+        "jQuery",
+        "Less",
+        "Mocha",
+        "Mongodb",
+        "Nginx",
         "HTML5",
         "CSS3",
+        "Sass",
         "Javascript",
+        "Typescript",
         "Python",
         "MySQL",
         "Nodejs",
         "Git",
         "PHP",
         "Java"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "level": "Master", 
+      "keywords": [
+        "Laravel",
+        "Vuejs",
+        "Angularjs",
+        "Bootstrap",
+        "Express",
+        "Symfony"
       ]
     },
     {
