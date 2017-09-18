@@ -64,7 +64,7 @@
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.0",
     "babel-loader": "7.1.2",
-    "babel-plugin-istanbul": "4.1.4",
+    "babel-plugin-istanbul": "4.1.5",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
@@ -146,7 +146,7 @@
     "webpack-dev-middleware": "1.12.0",
     "webpack-hot-middleware": "2.19.1",
     "webpack-merge": "4.1.0",
-    "z-schema": "3.18.3"
+    "z-schema": "3.18.4"
   },
   "greenkeeper": {
     "branchPrefix": "dependency-update-",
