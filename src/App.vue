@@ -24,8 +24,8 @@
   @import "~animate.css/animate.min.css";
 
   // Custom
-  @import "./scss/main";
-  @import "./scss/skills";
+  @import "./assets/scss/main";
+  @import "./assets/scss/skills";
 
   * {
     font-family: 'Montserrat', sans-serif;
