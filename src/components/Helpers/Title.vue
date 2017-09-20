@@ -2,7 +2,7 @@
   .row.my-5
     .col.text-center
       h1.h3.midnight-blue.font-weight-bold.text-uppercase(v-html="title")
-      span.fw-1.silver(v-html="subtitle")
+      span.fw2.silver(v-html="subtitle")
       border
 </template>
 

@@ -1,14 +1,18 @@
 <template lang="pug">
-  .col.text-center
-    i.fa.fa-2x.mb-3.midnight-blue(:class="classes",
-                                  @mouseover="animate()",
-                                  @mouseleave="animate(false)")
-    p.concrete.text-uppercase.small(v-html="name")
+  interest-icon.midnight-blue(:icon="icon",
+                              :title="title",
+                              hover="animated tada",
+                              "column"="col")
 </template>
 
 <script>
+  import Icon from '@/components/Helpers/Icon'
+
   export default {
     name: 'interest',
+    components: {
+      interestIcon: Icon
+    },
     props: {
       interest: {
         required: true,
@@ -19,19 +23,9 @@
         type: String
       }
     },
-    data () {
-      return {
-        classes: this.icon
-      }
-    },
     computed: {
-      name () {
+      title () {
         return this.interest.name
-      }
-    },
-    methods: {
-      animate (hovered = true) {
-        this.classes = hovered ? `${this.icon} animated tada` : this.icon
       }
     }
   }

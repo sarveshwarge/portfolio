@@ -208,12 +208,24 @@
   "publications": [],
   "skills": [
     {
-      "name": "Full Stack Development",
+      "name": "Development",
       "level": "Master",
       "keywords": [
+        "Apache",
+        "Bower",
+        "GitHub",
+        "Grunt",
+        "Gulp",
+        "jQuery",
+        "Less",
+        "Mocha",
+        "Mongodb",
+        "Nginx",
         "HTML5",
         "CSS3",
+        "Sass",
         "Javascript",
+        "Typescript",
         "Python",
         "MySQL",
         "Nodejs",
@@ -223,14 +235,26 @@
       ]
     },
     {
+      "name": "Frameworks",
+      "level": "Master", 
+      "keywords": [
+        "Laravel",
+        "Vue",
+        "Angular",
+        "Bootstrap",
+        "Express",
+        "Symfony"
+      ]
+    },
+    {
       "name": "DTP Allround",
       "level": "Master", 
       "keywords": [
-        "Adobe InDesign CC",
-        "Adobe Illustrator CC",
-        "Adobe Photoshop CC",
-        "Adobe Bridge CC",
-        "Adobe Acrobat DC"
+        "InDesign",
+        "Illustrator",
+        "Photoshop",
+        "Bridge",
+        "Acrobat"
       ]
     }
   ],
