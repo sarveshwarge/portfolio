@@ -1,16 +1,30 @@
 <template lang="pug">
-  span.d-block
-    i.fa.fa-check-circle-o.mr-2.midnight-blue
-    span.asbestos.fw2(v-html="keyword")
+  keyword-icon.wet-asphalt(:icon="icon",
+                           :title="title")
 </template>
 
 <script>
+  import slugify from 'slugify'
+
+  import Icon from '@/components/Helpers/Icon'
+
   export default {
     name: 'skill-keyword',
     props: {
       keyword: {
         required: true,
         type: String
+      }
+    },
+    components: {
+      keywordIcon: Icon
+    },
+    computed: {
+      icon () {
+        return `skill skill-${slugify(this.keyword).toLowerCase()}`
+      },
+      title () {
+        return this.keyword
       }
     }
   }
