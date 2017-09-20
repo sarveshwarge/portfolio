@@ -240,8 +240,8 @@
       "level": "Master", 
       "keywords": [
         "Laravel",
-        "Vuejs",
-        "Angularjs",
+        "Vue",
+        "Angular",
         "Bootstrap",
         "Express",
         "Symfony"
@@ -251,11 +251,11 @@
       "name": "DTP Allround",
       "level": "Master", 
       "keywords": [
-        "Adobe InDesign CC",
-        "Adobe Illustrator CC",
-        "Adobe Photoshop CC",
-        "Adobe Bridge CC",
-        "Adobe Acrobat DC"
+        "InDesign",
+        "Illustrator",
+        "Photoshop",
+        "Bridge",
+        "Acrobat"
       ]
     }
   ],

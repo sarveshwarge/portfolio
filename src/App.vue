@@ -25,6 +25,7 @@
 
   // Custom
   @import "./scss/main";
+  @import "./scss/skills";
 
   * {
     font-family: 'Montserrat', sans-serif;

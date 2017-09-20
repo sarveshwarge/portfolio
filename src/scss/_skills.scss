@@ -1,0 +1,221 @@
+@import "variables";
+
+@font-face {
+  font-family: 'portfolio-skills';
+  src: url('#{$icomoon-font-path}/portfolio-skills.eot?hgbrvq');
+  src:
+    url('#{$icomoon-font-path}/portfolio-skills.eot?hgbrvq#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/portfolio-skills.ttf?hgbrvq') format('truetype'),
+    url('#{$icomoon-font-path}/portfolio-skills.woff?hgbrvq') format('woff'),
+    url('#{$icomoon-font-path}/portfolio-skills.svg?hgbrvq#portfolio-skills') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.skill {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'portfolio-skills' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skill-apache {
+  &::before {
+    content: $skill-apache;
+  }
+}
+
+.skill-bower {
+  &::before {
+    content: $skill-bower;
+  }
+}
+
+.skill-css3 {
+  &::before {
+    content: $skill-css3;
+  }
+}
+
+.skill-git {
+  &::before {
+    content: $skill-git;
+  }
+}
+
+.skill-github {
+  &::before {
+    content: $skill-github;
+  }
+}
+
+.skill-grunt {
+  &::before {
+    content: $skill-grunt;
+  }
+}
+
+.skill-gulp {
+  &::before {
+    content: $skill-gulp;
+  }
+}
+
+.skill-html5 {
+  &::before {
+    content: $skill-html5;
+  }
+}
+
+.skill-java {
+  &::before {
+    content: $skill-java;
+  }
+}
+
+.skill-javascript {
+  &::before {
+    content: $skill-javascript;
+  }
+}
+
+.skill-jquery {
+  &::before {
+    content: $skill-jquery;
+  }
+}
+
+.skill-less {
+  &::before {
+    content: $skill-less;
+  }
+}
+
+.skill-mocha {
+  &::before {
+    content: $skill-mocha;
+  }
+}
+
+.skill-mongodb {
+  &::before {
+    content: $skill-mongodb;
+  }
+}
+
+.skill-mysql {
+  &::before {
+    content: $skill-mysql;
+  }
+}
+
+.skill-nginx {
+  &::before {
+    content: $skill-nginx;
+  }
+}
+
+.skill-nodejs {
+  &::before {
+    content: $skill-nodejs;
+  }
+}
+
+.skill-php {
+  &::before {
+    content: $skill-php;
+  }
+}
+
+.skill-python {
+  &::before {
+    content: $skill-python;
+  }
+}
+
+.skill-sass {
+  &::before {
+    content: $skill-sass;
+  }
+}
+
+.skill-typescript {
+  &::before {
+    content: $skill-typescript;
+  }
+}
+
+.skill-angular {
+  &::before {
+    content: $skill-angular;
+  }
+}
+
+.skill-bootstrap {
+  &::before {
+    content: $skill-bootstrap;
+  }
+}
+
+.skill-express {
+  &::before {
+    content: $skill-express;
+  }
+}
+
+.skill-laravel {
+  &::before {
+    content: $skill-laravel;
+  }
+}
+
+.skill-symfony {
+  &::before {
+    content: $skill-symfony;
+  }
+}
+
+.skill-vue {
+  &::before {
+    content: $skill-vue;
+  }
+}
+
+.skill-acrobat {
+  &::before {
+    content: $skill-acrobat;
+  }
+}
+
+.skill-bridge {
+  &::before {
+    content: $skill-bridge;
+  }
+}
+
+.skill-illustrator {
+  &::before {
+    content: $skill-illustrator;
+  }
+}
+
+.skill-indesign {
+  &::before {
+    content: $skill-indesign;
+  }
+}
+
+.skill-photoshop {
+  &::before {
+    content: $skill-photoshop;
+  }
+}
+

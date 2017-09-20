@@ -1,7 +1,6 @@
 <template lang="pug">
   keyword-icon.wet-asphalt(:icon="icon",
-                           :title="title",
-                           hover="colored")
+                           :title="title")
 </template>
 
 <script>
@@ -22,7 +21,7 @@
     },
     computed: {
       icon () {
-        return `devicon-${slugify(this.keyword).toLowerCase()}-plain`
+        return `skill skill-${slugify(this.keyword).toLowerCase()}`
       },
       title () {
         return this.keyword
@@ -30,8 +29,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped="scoped">
-  @import "~devicon-2.2/devicon.min.css";
-  @import "~devicon-2.2/devicon-colors.css";
-</style>
