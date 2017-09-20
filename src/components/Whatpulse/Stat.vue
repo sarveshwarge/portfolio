@@ -44,9 +44,11 @@
           const end = this.$moment().unix()
           const response = await this.$http.get(`http://api.whatpulse.org/pulses.php?user=${username}&start=${start}&end=${end}&format=json`)
           this.count = 0
-          Object.values(response.data).forEach((pulse) => {
-            this.count += +pulse[_.upperFirst(this.type)]
-          })
+          if (!response.data.error) {
+            Object.values(response.data).forEach((pulse) => {
+              this.count += +pulse[_.upperFirst(this.type)]
+            })
+          }
         } catch (err) {}
       },
       createInterval () {
