@@ -7,6 +7,7 @@
       skills-group(v-for="(skill, index) in skills",
                     :key="index",
                     :skill="skill")
+    cv-download
 </template>
 
 <script>
@@ -14,6 +15,8 @@
   
   import Section from '@/components/Helpers/Section'
   import Group from '@/components/Skills/Group'
+  import Download from '@/components/Helpers/Download'
+
   import active from '@/mixins/active'
 
   export default {
@@ -25,7 +28,8 @@
     },
     components: {
       skillsSection: Section,
-      skillsGroup: Group
+      skillsGroup: Group,
+      cvDownload: Download
     },
     computed: {
       ...mapGetters('resume', [

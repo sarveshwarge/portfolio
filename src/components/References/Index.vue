@@ -13,8 +13,9 @@
                      mode="out-in")
             reference(:reference="reference", :key="reference.name")
       references-control(direction="next")
-    .row.mb-4
+    .row.mb-5
       references-indicators(:references="references")
+    cv-download
 </template>
 
 <script>
@@ -24,6 +25,7 @@
   import Control from '@/components/References/Control'
   import Reference from '@/components/References/Reference'
   import Indicators from '@/components/References/Indicators'
+  import Download from '@/components/Helpers/Download'
 
   import active from '@/mixins/active'
 
@@ -38,7 +40,8 @@
       referencesSection: Section,
       referencesControl: Control,
       referencesIndicators: Indicators,
-      reference: Reference
+      reference: Reference,
+      cvDownload: Download
     },
     computed: {
       ...mapGetters('resume', [
