@@ -28,6 +28,7 @@
       .col
         p.silver.fw2.lh-2(v-html="summary")
         introduction-signature(:name="name")
+    cv-download
 </template>
 
 <script>
@@ -37,6 +38,7 @@
   import Signature from '@/components/Introduction/Signature'
   import Information from '@/components/Introduction/Information'
   import Languages from '@/components/Introduction/Languages'
+  import Download from '@/components/Helpers/Download'
 
   import active from '@/mixins/active'
 
@@ -51,7 +53,8 @@
       introductionSection: Section,
       IntroductionInformation: Information,
       IntroductionSignature: Signature,
-      introductionLanguages: Languages
+      introductionLanguages: Languages,
+      cvDownload: Download
     },
     computed: {
       ...mapGetters('basics', [
