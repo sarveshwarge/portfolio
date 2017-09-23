@@ -6,10 +6,10 @@
           .col
             p.m-2.small.midnight-blue
               i.fa.fa-heart-o.mr-2
-              a.midnight-blue.mr-2.b.hover-clouds.hover-text-decoration-none(v-html="name",
-                                                                             :href="mailto",
-                                                                             target="_blank",
-                                                                             rel="noopener")
+              a.midnight-blue.mr-2.b.hover-clouds.hover-text-decoration-none.transition-800(v-html="name",
+                                                                                            :href="mailto",
+                                                                                            target="_blank",
+                                                                                            rel="noopener")
               span(v-html="year")
 </template>
 

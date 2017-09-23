@@ -5,10 +5,10 @@
            :key="index")
         b-tooltip(:target="id(profile.network)",
                   :title="profile.network")
-        a.mr-2.concrete.hover-clouds(:href="profile.url",
-                                     target="_blank",
-                                     rel="noopener",
-                                     :id="id(profile.network)")
+        a.mr-2.concrete.hover-clouds.transition-800(:href="profile.url",
+                                                    target="_blank",
+                                                    rel="noopener",
+                                                    :id="id(profile.network)")
           i.fa.fa-lg(:class="icon(profile.network)")
 </template>
 
