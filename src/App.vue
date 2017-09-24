@@ -26,6 +26,7 @@
   // Custom
   @import "./assets/scss/main";
   @import "./assets/scss/skills";
+  @import "./assets/scss/hovered";
 
   * {
     font-family: 'Montserrat', sans-serif;
