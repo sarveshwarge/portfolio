@@ -27,6 +27,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.skill-gitaar-spelen {
+  &::before {
+    content: $skill-gitaar-spelen;
+  }
+}
+
+.skill-home-assistant {
+  &::before {
+    content: $skill-home-assistant;
+  }
+}
+
 .skill-apache {
   &::before {
     content: $skill-apache;
