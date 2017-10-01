@@ -3,7 +3,7 @@
                     background-color="clouds",
                     title="Interesses",
                     subtitle="Zo vul ik het liefst mijn dag")
-    .row
+    .row.justify-content-center
       interest(v-for="(interest, index) in interests",
                :key="index",
                :interest="interest",
@@ -39,7 +39,8 @@
           'apple': 'fa-apple',
           'films-and-series': 'fa-film',
           'games': 'fa-gamepad',
-          'gitaar-spelen': 'fa-child',
+          'gitaar-spelen': 'skill skill-gitaar-spelen',
+          'home-assistant': 'skill skill-home-assistant',
           'koffie': 'fa-coffee',
           'muziek': 'fa-music',
           'programmeren': 'fa-code',

@@ -2,7 +2,7 @@
   interest-icon.midnight-blue(:icon="icon",
                               :title="title",
                               hover="animated tada",
-                              "column"="col")
+                              "column"="col-2")
 </template>
 
 <script>
